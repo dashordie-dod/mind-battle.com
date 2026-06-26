@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FAQ — MindBattle</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: #0E0E16; color: #E4E1ED; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 16px; line-height: 1.7; padding: 0 0 60px; }
+    header { background: #13131B; border-bottom: 1px solid #2A2B3A; padding: 20px 24px; display: flex; align-items: center; gap: 12px; position: sticky; top: 0; z-index: 10; }
+    .logo-mark { width: 36px; height: 36px; }
+    .brand { font-size: 20px; font-weight: 700; color: #FF7A29; letter-spacing: -0.3px; }
+    .brand span { color: #E4E1ED; }
+    .container { max-width: 760px; margin: 0 auto; padding: 40px 24px 0; }
+    .badge { display: inline-block; background: rgba(192,193,255,0.1); border: 1px solid rgba(192,193,255,0.3); color: #C0C1FF; font-size: 12px; font-weight: 600; letter-spacing: 0.05em; padding: 4px 10px; border-radius: 20px; margin-bottom: 16px; text-transform: uppercase; }
+    .page-title { font-size: 28px; font-weight: 700; color: #E4E1ED; margin-bottom: 6px; }
+    .subtitle { font-size: 15px; color: #A78B7E; margin-bottom: 40px; }
+    .section-title { font-size: 13px; font-weight: 600; color: #A78B7E; text-transform: uppercase; letter-spacing: 0.1em; margin: 40px 0 16px; }
+    .faq-item { background: #1B1C28; border: 1px solid #2A2B3A; border-radius: 12px; margin-bottom: 10px; overflow: hidden; }
+    .faq-question { width: 100%; background: none; border: none; padding: 18px 20px; display: flex; justify-content: space-between; align-items: center; cursor: pointer; text-align: left; gap: 12px; }
+    .faq-question:hover { background: rgba(255,122,41,0.05); }
+    .faq-q-text { font-size: 15px; font-weight: 600; color: #E4E1ED; flex: 1; }
+    .faq-icon { width: 24px; height: 24px; border-radius: 50%; background: #2A2B3A; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 16px; color: #FF7A29; transition: transform 0.2s; line-height: 1; }
+    .faq-answer { display: none; padding: 14px 20px 18px; font-size: 14px; color: #C8C5D4; line-height: 1.7; border-top: 1px solid #2A2B3A; }
+    .faq-answer.open { display: block; }
+    .faq-icon.open { transform: rotate(45deg); }
+    .faq-answer ul { margin: 8px 0 0 18px; }
+    .faq-answer li { margin-bottom: 6px; }
+    .faq-answer a { color: #FF7A29; text-decoration: none; }
+    .highlight-box { background: rgba(255,122,41,0.08); border: 1px solid rgba(255,122,41,0.25); border-radius: 8px; padding: 12px 14px; margin-top: 10px; font-size: 13px; color: #E0C0B2; }
+    .green { color: #45DFA4; font-weight: 600; }
+    .orange { color: #FF7A29; font-weight: 600; }
+    .contact-card { background: #1B1C28; border: 1px solid #2A2B3A; border-radius: 14px; padding: 24px; margin-top: 40px; text-align: center; }
+    .contact-card h3 { font-size: 18px; color: #E4E1ED; margin-bottom: 8px; }
+    .contact-card p { font-size: 14px; color: #A78B7E; margin-bottom: 16px; }
+    .contact-btn { display: inline-block; background: #FF7A29; color: #fff; font-weight: 600; font-size: 14px; padding: 12px 28px; border-radius: 10px; text-decoration: none; }
+    footer { margin-top: 60px; padding: 24px; text-align: center; border-top: 1px solid #2A2B3A; color: #A78B7E; font-size: 13px; }
+    footer a { color: #A78B7E; text-decoration: none; }
+    footer a:hover { color: #FF7A29; }
+  </style>
+</head>
+<body>
+<header>
+  <svg class="logo-mark" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 4C11 4 6 9 6 16c0 2.5 0.8 5 2.5 7C6 25.5 6 30 11 32c2 1.5 4.5 3 7 3s5-1.5 7-3c5-2 5-6.5 2.5-9C29.2 21 30 18.5 30 16c0-7-5-12-12-12z" stroke="url(#lg4)" stroke-width="2.5" fill="none"/>
+    <path d="M18 10l-4 9h4l-2 8 6-11h-4l2-6z" fill="url(#lg4)"/>
+    <defs><linearGradient id="lg4" x1="6" y1="4" x2="30" y2="35" gradientUnits="userSpaceOnUse"><stop stop-color="#FF7A29"/><stop offset="1" stop-color="#FF5470"/></linearGradient></defs>
+  </svg>
+  <span class="brand">Mind<span>Battle</span></span>
+</header>
+
+<div class="container">
+  <div class="badge">Help Centre</div>
+  <h1 class="page-title">Frequently Asked Questions</h1>
+  <p class="subtitle">Everything you need to know about MindBattle</p>
+
+  <div class="section-title">Getting Started</div>
+
+  <div class="faq-item">
+    <button class="faq-question" onclick="toggle(this)"><span class="faq-q-text">What is MindBattle?</span><span class="faq-icon">+</span></button>
+    <div class="faq-answer">MindBattle is an educational quiz battle app where you compete in knowledge challenges across categories like Science, History, Sports, Geography, and General Knowledge. You earn XP by playing and can earn real cash by completing offerwall offers inside the app.</div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question" onclick="toggle(this)"><span class="faq-q-text">Who can use MindBattle?</span><span class="faq-icon">+</span></button>
+    <div class="faq-answer">MindBattle is available to users aged <strong>18 and above</strong>. You must register with a valid email address. KYC (identity verification) is required before any cash withdrawal.</div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question" onclick="toggle(this)"><span class="faq-q-text">How do I create an account?</span><span class="faq-icon">+</span></button>
+    <div class="faq-answer">Download MindBattle, tap "Register", enter your email, choose a username, and set a password. You can also sign in with Google. Your account is created instantly.</div>
+  </div>
+
+  <div class="section-title">Gameplay</div>
+
+  <div class="faq-item">
+    <button class="faq-question" onclick="toggle(this)"><span class="faq-q-text">How does a battle work?</span><span class="faq-icon">+</span></button>
+    <div class="faq-answer">
+      Before a battle, choose your category. Each battle has 50 questions across 5 rounds with a timer per question.
+      <ul>
+        <li>Correct answer: <span class="green">+2 XP</span></li>
+        <li>Wrong answer: <span style="color:#FFB4AB">−1 XP</span></li>
+        <li>Skipped / timed out: 0 XP</li>
+        <li>Net XP per battle is never negative</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question" onclick="toggle(this)"><span class="faq-q-text">How many free battles do I get per day?</span><span class="faq-icon">+</span></button>
+    <div class="faq-answer">You get <strong>5 free battles per day</strong>. After that, tap "Watch Ad to Play" to unlock additional battles by watching a short rewarded video. Free battles reset daily at midnight UTC.</div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question" onclick="toggle(this)"><span class="faq-q-text">What are lifelines?</span><span class="faq-icon">+</span></button>
+    <div class="faq-answer">
+      Lifelines help you during a battle:
+      <ul>
+        <li><strong>50/50</strong> — removes two wrong answers</li>
+        <li><strong>Skip</strong> — skips the current question with no penalty</li>
+        <li><strong>+Time</strong> — adds extra seconds to your timer</li>
+      </ul>
+      Watch a rewarded ad during a battle to restore all lifelines.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question" onclick="toggle(this)"><span class="faq-q-text">What happens if I leave the app during a battle?</span><span class="faq-icon">+</span></button>
+    <div class="faq-answer">If you press the home button or switch apps mid-battle, the current question is automatically recorded as incorrect and the battle moves on. This ensures fair play for all players.</div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question" onclick="toggle(this)"><span class="faq-q-text">What categories are available?</span><span class="faq-icon">+</span></button>
+    <div class="faq-answer">MindBattle currently includes <strong>Science, History, Geography, Sports, and General Knowledge</strong>. You choose your category before each battle. More categories will be added over time.</div>
+  </div>
+
+  <div class="section-title">XP & Rewards</div>
+
+  <div class="faq-item">
+    <button class="faq-question" onclick="toggle(this)"><span class="faq-q-text">What is XP and what does it do?</span><span class="faq-icon">+</span></button>
+    <div class="faq-answer">
+      XP (Experience Points) is your in-game progression currency. It has <strong class="orange">no cash value</strong> and cannot be withdrawn. XP determines your rank tier and leaderboard position, and is one of the requirements to unlock the withdrawal feature.
+      <div class="highlight-box">XP is purely for status and competition. It is not money and cannot be exchanged for money.</div>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question" onclick="toggle(this)"><span class="faq-q-text">What are Cash Coins?</span><span class="faq-icon">+</span></button>
+    <div class="faq-answer">
+      Cash Coins are the redeemable currency in MindBattle. They are earned <strong>only</strong> by completing offerwall offers — not by playing battles and not by watching ads.
+      <div class="highlight-box">Fixed ratio: <strong>1,000 Cash Coins = $1.00 USD</strong></div>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question" onclick="toggle(this)"><span class="faq-q-text">Can I earn cash by winning battles or watching ads?</span><span class="faq-icon">+</span></button>
+    <div class="faq-answer"><strong>No.</strong> Battles earn XP only — XP has no cash value. Watching rewarded ads unlocks gameplay benefits (extra battles, lifelines) — not Cash Coins. Cash Coins come exclusively from completing offerwall offers.</div>
+  </div>
+
+  <div class="section-title">Withdrawals & Payouts</div>
+
+  <div class="faq-item">
+    <button class="faq-question" onclick="toggle(this)"><span class="faq-q-text">What are the withdrawal requirements?</span><span class="faq-icon">+</span></button>
+    <div class="faq-answer">
+      All requirements must be met simultaneously. Full details are shown in the Wallet tab of the app. Requirements include:
+      <ul>
+        <li>Verified email address</li>
+        <li>Approved KYC identity verification</li>
+        <li>Sufficient lifetime XP earned through gameplay</li>
+        <li>Account age requirement met</li>
+        <li>Minimum battles played</li>
+        <li>Active login streak</li>
+        <li>No penalty flags</li>
+        <li>Minimum balance of $50.00</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question" onclick="toggle(this)"><span class="faq-q-text">What are the withdrawal limits?</span><span class="faq-icon">+</span></button>
+    <div class="faq-answer">
+      <ul>
+        <li>Minimum per withdrawal: <strong>$50.00</strong></li>
+        <li>Maximum per withdrawal: <strong>$100.00</strong></li>
+        <li>Payout method: Payoneer only</li>
+        <li>Processing time: 3–10 business days after approval</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question" onclick="toggle(this)"><span class="faq-q-text">What is KYC and why is it required?</span><span class="faq-icon">+</span></button>
+    <div class="faq-answer">KYC (Know Your Customer) is identity verification required before any cash payout. You will need to submit a valid government-issued ID. Contact <a href="mailto:kyc@mind-battle.com">kyc@mind-battle.com</a> to start the KYC process.</div>
+  </div>
+
+  <div class="section-title">Referral Programme</div>
+
+  <div class="faq-item">
+    <button class="faq-question" onclick="toggle(this)"><span class="faq-q-text">How does the referral programme work?</span><span class="faq-icon">+</span></button>
+    <div class="faq-answer">Share your unique referral code (found on your Profile screen) with friends. When a referred friend meets all verification criteria, you earn Cash Coins per verified referral. Full details including payout thresholds are shown in the Profile section of the app.</div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question" onclick="toggle(this)"><span class="faq-q-text">What makes a referral "verified"?</span><span class="faq-icon">+</span></button>
+    <div class="faq-answer">
+      The referred user must meet all verification criteria, which include playing a minimum number of battles, earning sufficient XP, having a minimum account age, completing KYC, and having no penalty flags. Self-referral and fake accounts result in permanent ban.
+    </div>
+  </div>
+
+  <div class="section-title">Account & Security</div>
+
+  <div class="faq-item">
+    <button class="faq-question" onclick="toggle(this)"><span class="faq-q-text">Can I have more than one account?</span><span class="faq-icon">+</span></button>
+    <div class="faq-answer">No. One account per person is strictly enforced. Multiple accounts are considered fraud and will result in permanent ban of all associated accounts and forfeiture of all earnings.</div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question" onclick="toggle(this)"><span class="faq-q-text">How do I delete my account?</span><span class="faq-icon">+</span></button>
+    <div class="faq-answer">Go to <strong>Profile → Account Settings → Delete Account</strong>, or email <a href="mailto:support@mind-battle.com">support@mind-battle.com</a>. A 30-day grace period applies. See our <a href="delete.html">Account Deletion Policy</a> for full details.</div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question" onclick="toggle(this)"><span class="faq-q-text">My account was banned — what do I do?</span><span class="faq-icon">+</span></button>
+    <div class="faq-answer">Contact us at <a href="mailto:support@mind-battle.com">support@mind-battle.com</a> with your registered email and a description of the issue. We review ban appeals within 7 business days. Bans resulting from confirmed fraud are not reversible.</div>
+  </div>
+
+  <div class="contact-card">
+    <h3>Still have questions?</h3>
+    <p>Our support team typically responds within 24–48 hours.</p>
+    <a class="contact-btn" href="mailto:support@mind-battle.com">Contact Support</a>
+  </div>
+</div>
+
+<footer>
+  &copy; 2026 MindBattle &nbsp;·&nbsp;
+  <a href="terms.html">Terms of Service</a> &nbsp;·&nbsp;
+  <a href="privacy.html">Privacy Policy</a> &nbsp;·&nbsp;
+  <a href="faq.html">FAQ</a> &nbsp;·&nbsp;
+  <a href="delete.html">Account Deletion</a>
+</footer>
+
+<script>
+  function toggle(btn) {
+    const answer = btn.nextElementSibling;
+    const icon = btn.querySelector('.faq-icon');
+    const isOpen = answer.classList.contains('open');
+    document.querySelectorAll('.faq-answer').forEach(a => a.classList.remove('open'));
+    document.querySelectorAll('.faq-icon').forEach(i => i.classList.remove('open'));
+    if (!isOpen) { answer.classList.add('open'); icon.classList.add('open'); }
+  }
+</script>
+</body>
+</html>
