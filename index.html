@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MindBattle — Battle Smarter. Win Real.</title>
-  <meta name="description" content="MindBattle is a live trivia battle royale. Challenge real players, prove your knowledge, and earn real cash. Available on Android." />
+  <meta name="description" content="MindBattle is a live trivia battle royale. Challenge real players, prove your knowledge, and earn real cash through offers. Available on Android." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet" />
@@ -38,11 +38,9 @@
     }
     a { color: inherit; text-decoration: none; }
 
-    /* ── Typography ── */
     .sora { font-family: 'Sora', sans-serif; }
     .mono { font-family: 'JetBrains Mono', monospace; }
 
-    /* ── Layout ── */
     .container { max-width: 1140px; margin: 0 auto; padding: 0 20px; }
     .section { padding: 96px 0; }
     .section-label {
@@ -59,11 +57,9 @@
     }
     .section-sub { font-size: 16px; color: var(--muted); max-width: 540px; line-height: 1.75; }
 
-    /* ── Gradient text ── */
     .grad { background: linear-gradient(135deg, var(--orange), var(--orange2)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
     .grad-green { background: linear-gradient(135deg, var(--green), #00b781); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
 
-    /* ── Buttons ── */
     .btn {
       display: inline-flex; align-items: center; gap: 8px;
       padding: 14px 28px; border-radius: 50px;
@@ -84,7 +80,6 @@
     .btn-outline:hover { border-color: var(--orange); background: rgba(255,122,41,0.08); }
     .btn-disabled { opacity: 0.4; cursor: not-allowed; pointer-events: none; }
 
-    /* ── Cards ── */
     .card {
       background: var(--bg3); border: 1px solid var(--border);
       border-radius: var(--r);
@@ -92,11 +87,9 @@
     }
     .card:hover { border-color: rgba(255,122,41,0.4); transform: translateY(-3px); }
 
-    /* ── Scroll reveal ── */
     .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.65s ease, transform 0.65s ease; }
     .reveal.visible { opacity: 1; transform: translateY(0); }
 
-    /* ── NAV ── */
     nav {
       position: fixed; top: 0; left: 0; right: 0; z-index: 100;
       padding: 14px 0;
@@ -134,7 +127,6 @@
     .mobile-menu.open { display: flex; }
     .mobile-menu a { font-family: 'Sora', sans-serif; font-size: 26px; font-weight: 700; }
 
-    /* ── HERO ── */
     #hero {
       min-height: 100vh; display: flex; align-items: center;
       padding-top: 80px; position: relative; overflow: hidden;
@@ -177,7 +169,6 @@
     .hero-stat-num { font-family: 'JetBrains Mono', monospace; font-size: 26px; font-weight: 600; letter-spacing: -0.05em; }
     .hero-stat-label { font-size: 12px; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; color: var(--muted); margin-top: 3px; }
 
-    /* ── App mockup ── */
     .app-mockup { display: flex; flex-direction: column; gap: 12px; align-items: center; }
     .phone-shell {
       width: 100%; max-width: 300px;
@@ -244,7 +235,6 @@
     .p-option.correct .p-option-check { border-color: var(--green); color: var(--green); }
     .p-option.selected .p-option-check { border-color: var(--orange); background: var(--orange); color: #fff; }
 
-    /* live feed pill */
     .live-pill {
       width: 100%; max-width: 300px;
       background: var(--bg2); border: 1px solid var(--border);
@@ -264,7 +254,6 @@
     .lp-item .n { color: var(--text); font-weight: 600; }
     .lp-item .c { color: var(--green); font-weight: 700; font-family: 'JetBrains Mono', monospace; }
 
-    /* ── FEATURES ── */
     #features { background: var(--bg2); }
     .features-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; margin-top: 56px; }
     .feature-card { padding: 28px; }
@@ -277,7 +266,6 @@
     .feature-card h3 { font-family: 'Sora', sans-serif; font-size: 17px; font-weight: 700; margin-bottom: 8px; }
     .feature-card p { font-size: 13px; color: var(--muted); line-height: 1.7; }
 
-    /* ── HOW IT WORKS ── */
     .steps { margin-top: 56px; display: flex; flex-direction: column; gap: 0; }
     .step { display: grid; grid-template-columns: 72px 1fr; gap: 28px; position: relative; }
     .step:not(:last-child)::after {
@@ -295,7 +283,6 @@
     .step-content h3 { font-family: 'Sora', sans-serif; font-size: 20px; font-weight: 700; margin-bottom: 8px; }
     .step-content p { font-size: 14px; color: var(--muted); line-height: 1.75; max-width: 460px; }
 
-    /* ── EARN ── */
     #earn { background: var(--bg2); }
     .earn-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start; margin-top: 56px; }
     .coin-cards { display: flex; flex-direction: column; gap: 12px; }
@@ -323,7 +310,6 @@
       font-size: 11px; color: var(--green); margin-top: 1px;
     }
 
-    /* ── ABOUT ── */
     .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; }
     .about-card {
       background: var(--bg3); border: 1px solid var(--border);
@@ -340,12 +326,10 @@
     .about-mini-num { font-family: 'JetBrains Mono', monospace; font-size: 22px; font-weight: 600; letter-spacing: -0.05em; }
     .about-mini-label { font-size: 11px; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; color: var(--muted); margin-top: 2px; }
 
-    /* ── DOWNLOAD ── */
     #download { background: var(--bg2); }
     .dl-inner { text-align: center; }
     .dl-inner .section-sub { margin: 0 auto 36px; text-align: center; }
 
-    /* ── CONTACT ── */
     .contact-grid { display: grid; grid-template-columns: 1fr 1.3fr; gap: 72px; align-items: start; margin-top: 56px; }
     .contact-items { display: flex; flex-direction: column; gap: 20px; }
     .c-item { display: flex; gap: 14px; align-items: flex-start; }
@@ -378,7 +362,6 @@
     .form-status.success { background: rgba(69,223,164,0.1); border: 1px solid rgba(69,223,164,0.2); color: var(--green); display: block; }
     .form-status.error { background: rgba(255,80,80,0.1); border: 1px solid rgba(255,80,80,0.2); color: #ff8080; display: block; }
 
-    /* ── FOOTER ── */
     footer { background: var(--bg); border-top: 1px solid var(--border); padding: 56px 0 28px; }
     .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 40px; }
     .footer-brand p { font-size: 13px; color: var(--muted); line-height: 1.7; margin-top: 14px; max-width: 260px; }
@@ -400,8 +383,9 @@
       font-size: 14px; transition: border-color 0.2s, background 0.2s;
     }
     .soc-btn:hover { border-color: var(--orange); background: rgba(255,122,41,0.1); }
+    .soc-btn svg { width: 16px; height: 16px; fill: var(--muted); transition: fill 0.2s; }
+    .soc-btn:hover svg { fill: var(--orange); }
 
-    /* ── Responsive ── */
     @media (max-width: 900px) {
       .nav-links, .nav-cta .btn-outline { display: none; }
       .hamburger { display: flex; }
@@ -428,7 +412,6 @@
 </head>
 <body>
 
-<!-- NAV -->
 <nav id="navbar">
   <div class="nav-inner">
     <a href="#" class="nav-logo">
@@ -449,7 +432,7 @@
     <ul class="nav-links">
       <li><a href="#features">Features</a></li>
       <li><a href="#how-it-works">How It Works</a></li>
-      <li><a href="#earn">Earn & Win</a></li>
+      <li><a href="#earn">Earn &amp; Win</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
@@ -460,17 +443,15 @@
   </div>
 </nav>
 
-<!-- MOBILE MENU -->
 <div class="mobile-menu" id="mobileMenu">
   <a href="#features" onclick="closeMob()">Features</a>
   <a href="#how-it-works" onclick="closeMob()">How It Works</a>
-  <a href="#earn" onclick="closeMob()">Earn & Win</a>
+  <a href="#earn" onclick="closeMob()">Earn &amp; Win</a>
   <a href="#about" onclick="closeMob()">About</a>
   <a href="#contact" onclick="closeMob()">Contact</a>
   <a href="#download" class="btn btn-primary" onclick="closeMob()">Download App</a>
 </div>
 
-<!-- HERO -->
 <section id="hero">
   <div class="hero-glow"></div>
   <div class="hero-grid"></div>
@@ -479,7 +460,7 @@
       <div>
         <div class="hero-badge"><span class="live-dot"></span> Live Battles Now</div>
         <h1 class="hero-title">Battle Smarter.<br><span class="grad">Win Real.</span></h1>
-        <p class="hero-sub">Challenge real players in live trivia battles across Science, History, Geography, Sports and more. Rise through the ranks — cash out your winnings.</p>
+        <p class="hero-sub">Challenge real players in live trivia battles across Science, History, Geography, Sports and more. Climb the ranks, complete offers, and cash out your earnings.</p>
         <div class="hero-btns">
           <a href="#download" class="btn btn-primary">📱 Get on Android</a>
           <a href="#how-it-works" class="btn btn-outline">How It Works</a>
@@ -495,12 +476,11 @@
           </div>
           <div>
             <div class="hero-stat-num grad-green">Real $</div>
-            <div class="hero-stat-label">Cash Prizes</div>
+            <div class="hero-stat-label">Cash Payouts</div>
           </div>
         </div>
       </div>
 
-      <!-- App Mockup -->
       <div class="app-mockup">
         <div class="phone-shell">
           <div class="phone-header">
@@ -517,7 +497,7 @@
             <div class="round-bar">
               <div class="left">
                 <div class="lbl">Current Battle</div>
-                <div class="val">Round 3/10</div>
+                <div class="val">Question 12/50</div>
               </div>
               <div class="right">
                 <div class="lbl">Opponents</div>
@@ -565,9 +545,9 @@
             <span class="live-dot"></span> Live Activity
           </div>
           <div class="live-pill-body" id="liveFeed">
-            <div class="lp-item">🏆 <span class="n">Ali_786</span> won <span class="c">+850</span> coins</div>
-            <div class="lp-item">⚡ <span class="n">QuizPro</span> answered 8/10 correctly</div>
-            <div class="lp-item">💰 <span class="n">Rana_K</span> withdrew <span class="c">$5.00</span></div>
+            <div class="lp-item">🏆 <span class="n">Ali_786</span> reached <span class="c">Gold</span> rank</div>
+            <div class="lp-item">⚡ <span class="n">QuizPro</span> answered 48/50 correctly</div>
+            <div class="lp-item">💰 <span class="n">Rana_K</span> withdrew <span class="c">$50.00</span></div>
             <div class="lp-item">🔥 <span class="n">BrainStorm</span> on a 12-win streak</div>
           </div>
         </div>
@@ -576,7 +556,6 @@
   </div>
 </section>
 
-<!-- FEATURES -->
 <section id="features" class="section">
   <div class="container">
     <div class="reveal">
@@ -585,17 +564,16 @@
       <p class="section-sub">Not just trivia — a full competitive ecosystem built for people who take knowledge seriously.</p>
     </div>
     <div class="features-grid">
-      <div class="card feature-card reveal"><div class="feat-icon">⚔️</div><h3>Live 1v1 Battles</h3><p>Matched against real opponents in real time. Speed and accuracy both matter — every second counts.</p></div>
-      <div class="card feature-card reveal"><div class="feat-icon">💰</div><h3>Real Cash Prizes</h3><p>Your Cash Coins are real money. Win battles, complete surveys, and redeem whenever you hit the withdrawal threshold.</p></div>
+      <div class="card feature-card reveal"><div class="feat-icon">⚔️</div><h3>Live Trivia Battles</h3><p>Compete against real opponents across five categories. Speed and accuracy both matter — every second counts.</p></div>
+      <div class="card feature-card reveal"><div class="feat-icon">💰</div><h3>Real Cash Payouts</h3><p>Earn Cash Coins by completing sponsored offers in the Earn tab, then withdraw real money once you meet the requirements.</p></div>
       <div class="card feature-card reveal"><div class="feat-icon">🧠</div><h3>50,000+ Questions</h3><p>Science, History, Geography, Sports, and General Knowledge. Questions are vetted and constantly growing.</p></div>
-      <div class="card feature-card reveal"><div class="feat-icon">🏅</div><h3>Achievements & Ranks</h3><p>Unlock achievements, climb the leaderboard, and build a win streak that earns you bonus rewards.</p></div>
-      <div class="card feature-card reveal"><div class="feat-icon">👥</div><h3>Referral Rewards</h3><p>Invite friends and earn 500 coins per verified referral. Hit 100 referrals and unlock a $50 payout milestone.</p></div>
-      <div class="card feature-card reveal"><div class="feat-icon">🔒</div><h3>Secure & Fair</h3><p>Full KYC verification before payouts. Fraud detection on every withdrawal. Your winnings and data are protected.</p></div>
+      <div class="card feature-card reveal"><div class="feat-icon">🏅</div><h3>Achievements &amp; Ranks</h3><p>Unlock achievements, climb the leaderboard, and build a win streak that boosts your standing.</p></div>
+      <div class="card feature-card reveal"><div class="feat-icon">👥</div><h3>Referral Rewards</h3><p>Invite friends and earn 500 Cash Coins per verified referral. Hit 100 verified referrals to unlock a $50 milestone.</p></div>
+      <div class="card feature-card reveal"><div class="feat-icon">🔒</div><h3>Secure &amp; Fair</h3><p>Full KYC verification before payouts. Fraud detection on every withdrawal. Your earnings and data are protected.</p></div>
     </div>
   </div>
 </section>
 
-<!-- HOW IT WORKS -->
 <section id="how-it-works" class="section">
   <div class="container">
     <div class="reveal">
@@ -604,14 +582,13 @@
     </div>
     <div class="steps">
       <div class="step reveal"><div class="step-num">1</div><div class="step-content"><h3>Create your account</h3><p>Sign up with email or Google in under 60 seconds. Your profile, username, and starting rank are set up instantly.</p></div></div>
-      <div class="step reveal"><div class="step-num">2</div><div class="step-content"><h3>Enter a Battle</h3><p>Pick a category and join the matchmaking queue. You're matched with a real player at your skill level within seconds.</p></div></div>
-      <div class="step reveal"><div class="step-num">3</div><div class="step-content"><h3>Answer fast & earn coins</h3><p>10 questions, timed. Correct answers win Cash Coins. Complete surveys and offers in the Earn tab for extra coins on top.</p></div></div>
-      <div class="step reveal"><div class="step-num">4</div><div class="step-content"><h3>Verify once, withdraw anytime</h3><p>Complete a one-time KYC check. Once verified, withdraw your Cash Coins as real money whenever you like.</p></div></div>
+      <div class="step reveal"><div class="step-num">2</div><div class="step-content"><h3>Enter a Battle</h3><p>Pick a category and jump into a trivia battle. Answer fast and accurately to earn XP and climb the ranks.</p></div></div>
+      <div class="step reveal"><div class="step-num">3</div><div class="step-content"><h3>Earn Cash Coins in the Earn tab</h3><p>Complete sponsored surveys and offers in the Earn tab to earn Cash Coins — real, withdrawable value.</p></div></div>
+      <div class="step reveal"><div class="step-num">4</div><div class="step-content"><h3>Verify once, withdraw anytime</h3><p>Complete a one-time KYC check inside the app. Once verified and eligible, withdraw your Cash Coins as real money.</p></div></div>
     </div>
   </div>
 </section>
 
-<!-- EARN & WIN -->
 <section id="earn" class="section">
   <div class="container">
     <div class="reveal">
@@ -622,32 +599,31 @@
       <div class="coin-cards reveal">
         <div class="card coin-card">
           <div class="coin-icon xp">⭐</div>
-          <div><h4>XP Points</h4><p>Track your skill and unlock achievements. XP has no cash value — it's your rank in the community.</p></div>
+          <div><h4>XP Points</h4><p>Earned by playing battles. XP has no cash value — it's your rank in the community and part of your withdrawal eligibility.</p></div>
         </div>
         <div class="card coin-card">
           <div class="coin-icon cash">🪙</div>
-          <div><h4>Cash Coins</h4><p>1,000 Cash Coins = $1.00 USD. Earn from battles, surveys, referrals, and ad rewards. Withdraw when ready.</p></div>
+          <div><h4>Cash Coins</h4><p>1,000 Cash Coins = $1.00 USD. Earned only by completing offers in the Earn tab. Withdraw when eligible.</p></div>
         </div>
         <div class="fair-box">
           <div class="title">⚠️ Fair Play Rules</div>
-          <p>Withdrawals require KYC verification, a minimum battle history, and fraud review. We maintain a fair environment for everyone.</p>
+          <p>Withdrawals require KYC verification, a minimum battle history, sufficient XP, and fraud review. We maintain a fair environment for everyone.</p>
         </div>
       </div>
       <div class="reveal">
-        <h3 class="sora" style="font-size:20px;font-weight:700;margin-bottom:20px;">Ways to earn Cash Coins</h3>
+        <h3 class="sora" style="font-size:20px;font-weight:700;margin-bottom:20px;">How the two currencies work</h3>
         <ul class="earn-list">
-          <li class="earn-item"><div class="earn-check">✓</div><div><strong>Win trivia battles</strong> — Correct answers earn coins. Win the match and earn a bonus on top.</div></li>
-          <li class="earn-item"><div class="earn-check">✓</div><div><strong>Complete surveys & offers</strong> — Tap the Earn tab and complete sponsored offers for extra coin rewards.</div></li>
-          <li class="earn-item"><div class="earn-check">✓</div><div><strong>Watch rewarded ads</strong> — Optional daily ad rewards. Watch once, earn coins instantly.</div></li>
-          <li class="earn-item"><div class="earn-check">✓</div><div><strong>Refer friends</strong> — 500 coins per verified referral. Share your code on WhatsApp.</div></li>
-          <li class="earn-item"><div class="earn-check">✓</div><div><strong>Win streaks</strong> — Consecutive wins multiply your earnings. Stay sharp, keep the streak alive.</div></li>
+          <li class="earn-item"><div class="earn-check">✓</div><div><strong>Play battles to earn XP</strong> — Correct answers earn XP, wrong answers deduct XP. XP builds your rank and counts toward withdrawal eligibility. XP has no cash value.</div></li>
+          <li class="earn-item"><div class="earn-check">✓</div><div><strong>Complete offers to earn Cash Coins</strong> — Cash Coins are earned only by completing sponsored surveys and offers in the Earn tab. This is the only way to earn withdrawable value.</div></li>
+          <li class="earn-item"><div class="earn-check">✓</div><div><strong>Watch rewarded ads for gameplay perks</strong> — Optional ads unlock extra battles and restore lifelines. Ads do not earn Cash Coins.</div></li>
+          <li class="earn-item"><div class="earn-check">✓</div><div><strong>Refer friends for Cash Coins</strong> — Earn 500 Cash Coins per verified referral. Share your code with friends.</div></li>
+          <li class="earn-item"><div class="earn-check">✓</div><div><strong>Withdraw when eligible</strong> — Once you meet the XP, battle, and KYC requirements, cash out via Payoneer or USDT.</div></li>
         </ul>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ABOUT -->
 <section id="about" class="section">
   <div class="container">
     <div class="about-grid">
@@ -672,7 +648,7 @@
       <div class="reveal">
         <div class="section-label">About MindBattle</div>
         <h2 class="section-title" style="font-size:clamp(24px,3.5vw,38px);">Built for people who believe their knowledge is worth something.</h2>
-        <p style="color:var(--muted);font-size:15px;line-height:1.8;margin-bottom:16px;">MindBattle started with one idea: trivia games shouldn't just be fun — they should be competitive and rewarding. We built a game where your answers have real value, your skill determines your rank, and your winnings are real money.</p>
+        <p style="color:var(--muted);font-size:15px;line-height:1.8;margin-bottom:16px;">MindBattle started with one idea: trivia games shouldn't just be fun — they should be competitive and rewarding. We built a game where your skill determines your rank, and where completing offers turns your time into real value.</p>
         <p style="color:var(--muted);font-size:15px;line-height:1.8;margin-bottom:28px;">We're a small, independent team. We stand behind every battle, every payout, and every player experience.</p>
         <a href="#contact" class="btn btn-outline">Get in touch →</a>
       </div>
@@ -680,7 +656,6 @@
   </div>
 </section>
 
-<!-- DOWNLOAD -->
 <section id="download" class="section" style="background:var(--bg2);">
   <div class="container dl-inner">
     <div class="reveal">
@@ -695,7 +670,6 @@
   </div>
 </section>
 
-<!-- CONTACT -->
 <section id="contact" class="section">
   <div class="container">
     <div class="reveal">
@@ -707,7 +681,7 @@
       <div class="contact-items reveal">
         <div class="c-item"><div class="c-icon">📧</div><div><h4>Email Support</h4><p><a href="mailto:support@mind-battle.com">support@mind-battle.com</a></p><p style="margin-top:3px;font-size:12px;">Response within 24 hours</p></div></div>
         <div class="c-item"><div class="c-icon">💬</div><div><h4>General Enquiries</h4><p><a href="mailto:hello@mind-battle.com">hello@mind-battle.com</a></p></div></div>
-        <div class="c-item"><div class="c-icon">🏢</div><div><h4>Business & Partnerships</h4><p>Operated by Cognira LLC, Wyoming, USA</p></div></div>
+        <div class="c-item"><div class="c-icon">🏢</div><div><h4>Business &amp; Partnerships</h4><p>Operated by Cognira LLC, Wyoming, USA</p></div></div>
         <div class="c-item"><div class="c-icon">⚖️</div><div><h4>Legal</h4><p>
           <a href="https://www.mind-battle.com/privacy.html">Privacy Policy</a> &nbsp;·&nbsp;
           <a href="https://www.mind-battle.com/terms.html">Terms of Service</a>
@@ -745,7 +719,6 @@
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
   <div class="container">
     <div class="footer-grid">
@@ -760,14 +733,14 @@
           </div>
           MindBattle
         </a>
-        <p>The live trivia battle royale where your knowledge pays. Challenge real players. Win real prizes.</p>
+        <p>The live trivia battle royale where your knowledge pays. Challenge real players. Earn real rewards.</p>
       </div>
       <div class="footer-col">
         <h4>Game</h4>
         <ul>
           <li><a href="#features">Features</a></li>
           <li><a href="#how-it-works">How It Works</a></li>
-          <li><a href="#earn">Earn & Win</a></li>
+          <li><a href="#earn">Earn &amp; Win</a></li>
           <li><a href="#download">Download</a></li>
         </ul>
       </div>
@@ -793,32 +766,37 @@
     <div class="footer-bottom">
       <p>© 2026 <a href="#about">Cognira LLC</a>. All rights reserved. &nbsp;·&nbsp; <a href="https://www.mind-battle.com/privacy.html">Privacy</a> &nbsp;·&nbsp; <a href="https://www.mind-battle.com/terms.html">Terms</a></p>
       <div class="socials">
-        <a class="soc-btn" href="#" title="Twitter/X">𝕏</a>
-        <a class="soc-btn" href="#" title="Instagram">📸</a>
-        <a class="soc-btn" href="#" title="Facebook">𝑓</a>
+        <a class="soc-btn" href="https://www.instagram.com/min_dbattle" target="_blank" rel="noopener" title="Instagram" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41-.56-.22-.96-.48-1.38-.9-.42-.42-.68-.82-.9-1.38-.16-.42-.36-1.06-.41-2.23-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41 1.27-.06 1.65-.07 4.85-.07zM12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63c-.79.31-1.46.72-2.12 1.38C1.35 2.68.94 3.35.63 4.14.33 4.9.13 5.78.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.31.79.72 1.46 1.38 2.12.66.66 1.33 1.07 2.12 1.38.76.3 1.64.5 2.91.56 1.28.06 1.69.07 4.95.07s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56.79-.31 1.46-.72 2.12-1.38.66-.66 1.07-1.33 1.38-2.12.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91-.31-.79-.72-1.46-1.38-2.12C21.32 1.35 20.65.94 19.86.63 19.1.33 18.22.13 16.95.07 15.67.01 15.26 0 12 0zm0 5.84a6.16 6.16 0 100 12.32 6.16 6.16 0 000-12.32zM12 16a4 4 0 110-8 4 4 0 010 8zm6.41-10.85a1.44 1.44 0 100 2.88 1.44 1.44 0 000-2.88z"/></svg>
+        </a>
+        <a class="soc-btn" href="https://www.facebook.com/share/14hEa4qAHVH/" target="_blank" rel="noopener" title="Facebook" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.68.24 2.68.24v2.97h-1.51c-1.49 0-1.96.93-1.96 1.89v2.25h3.33l-.53 3.49h-2.8V24C19.61 23.1 24 18.1 24 12.07z"/></svg>
+        </a>
+        <a class="soc-btn" href="https://www.tiktok.com/@min_dbattle" target="_blank" rel="noopener" title="TikTok" aria-label="TikTok">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64c.3 0 .59.05.87.13V9.4a6.33 6.33 0 00-.87-.06 6.34 6.34 0 105.44 9.6 6.31 6.31 0 001.03-3.46V8.4a8.28 8.28 0 004.82 1.53V6.49a4.85 4.85 0 01-1.51.2z"/></svg>
+        </a>
+        <a class="soc-btn" href="https://www.linkedin.com/company/mindbattle/" target="_blank" rel="noopener" title="LinkedIn" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 110-4.13 2.06 2.06 0 010 4.13zm1.78 13.02H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg>
+        </a>
       </div>
     </div>
   </div>
 </footer>
 
 <script>
-  // Nav shrink
   const navbar = document.getElementById('navbar');
   window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 60));
 
-  // Hamburger
   document.getElementById('hamburger').addEventListener('click', () => document.getElementById('mobileMenu').classList.toggle('open'));
   function closeMob() { document.getElementById('mobileMenu').classList.remove('open'); }
 
-  // Scroll reveal
   const obs = new IntersectionObserver((entries) => {
     entries.forEach((e, i) => { if (e.isIntersecting) { setTimeout(() => e.target.classList.add('visible'), i * 70); obs.unobserve(e.target); }});
   }, { threshold: 0.1 });
   document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
 
-  // Timer
   let t = 12;
-  const circ = 2 * Math.PI * 35; // 220
+  const circ = 2 * Math.PI * 35;
   setInterval(() => {
     t = t > 0 ? t - 1 : 15;
     document.getElementById('timerNum').textContent = t;
@@ -828,22 +806,20 @@
     else document.getElementById('timerCircle').style.stroke = '#FF7A29';
   }, 1000);
 
-  // Option select
   function pickOpt(el, correct) {
     document.querySelectorAll('.p-option').forEach(o => { o.classList.remove('selected'); o.querySelector('.p-option-check').textContent = ''; });
     el.classList.add(correct ? 'correct' : 'selected');
     el.querySelector('.p-option-check').textContent = '✓';
   }
 
-  // Live feed
   const feeds = [
-    '🏆 <span class="n">Ali_786</span> won <span class="c">+850</span> coins',
-    '⚡ <span class="n">QuizPro</span> answered 8/10 correctly',
-    '💰 <span class="n">Rana_K</span> withdrew <span class="c">$5.00</span>',
+    '🏆 <span class="n">Ali_786</span> reached <span class="c">Gold</span> rank',
+    '⚡ <span class="n">QuizPro</span> answered 48/50 correctly',
+    '💰 <span class="n">Rana_K</span> withdrew <span class="c">$50.00</span>',
     '🔥 <span class="n">BrainStorm</span> on a 12-win streak',
     '🎯 <span class="n">Sara_M</span> just reached Gold rank',
-    '💎 <span class="n">Haider_Q</span> won <span class="c">+1200</span> coins',
-    '⚔️ <span class="n">Usman_T</span> beat 3 in a row',
+    '💎 <span class="n">Haider_Q</span> completed 6 offers',
+    '⚔️ <span class="n">Usman_T</span> won 3 battles in a row',
     '🌟 <span class="n">NadiaX</span> completed 5 surveys',
   ];
   let fi = 0;
@@ -858,7 +834,6 @@
     if (feedEl.children.length > 4) feedEl.removeChild(feedEl.firstChild);
   }, 2800);
 
-  // Contact form
   document.getElementById('contactForm').addEventListener('submit', async (e) => {
     e.preventDefault();
     const btn = e.target.querySelector('button[type=submit]');
