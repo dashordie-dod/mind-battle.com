@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MindBattle — Investor Pitch Deck</title>
+<meta name="description" content="MindBattle Pre-Seed Investment Opportunity. Competitive trivia quiz battle app live on Google Play with active users and early revenue.">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Segoe UI',Arial,sans-serif;background:#0a0e1a;color:#fff;overflow-x:hidden;}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,14,26,0.95);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,0.06);padding:14px 40px;display:flex;justify-content:space-between;align-items:center;}
+.nav-logo{font-size:18px;font-weight:800;color:#fff;letter-spacing:-0.5px;}
+.nav-logo span{color:#00c2ff;}
+.nav-links{display:flex;gap:28px;}
+.nav-links a{font-size:12px;color:rgba(255,255,255,0.5);text-decoration:none;letter-spacing:1px;text-transform:uppercase;transition:color 0.2s;}
+.nav-links a:hover{color:#00c2ff;}
+.nav-cta{background:#00c2ff;color:#0a0e1a;padding:8px 20px;border-radius:50px;font-size:12px;font-weight:700;text-decoration:none;letter-spacing:1px;text-transform:uppercase;}
+
+/* SECTIONS */
+.section{min-height:100vh;padding:120px 80px 80px;display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden;}
+
+/* COVER */
+.cover{background:#0a0e1a;align-items:center;text-align:center;}
+.cover::before{content:'';position:absolute;width:700px;height:700px;border-radius:50%;background:radial-gradient(circle,rgba(0,194,255,0.06) 0%,transparent 70%);top:-150px;right:-150px;pointer-events:none;}
+.cover::after{content:'';position:absolute;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(123,97,255,0.05) 0%,transparent 70%);bottom:-100px;left:-100px;pointer-events:none;}
+.live-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(27,175,122,0.1);border:1px solid rgba(27,175,122,0.3);border-radius:50px;padding:8px 20px;margin-bottom:32px;font-size:12px;color:#1baf7a;letter-spacing:2px;text-transform:uppercase;}
+.live-dot{width:8px;height:8px;border-radius:50%;background:#1baf7a;animation:pulse 2s infinite;}
+@keyframes pulse{0%,100%{opacity:1;}50%{opacity:0.4;}}
+.cover h1{font-size:100px;font-weight:900;background:linear-gradient(135deg,#ffffff 0%,#00c2ff 50%,#7b61ff 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;margin-bottom:20px;letter-spacing:-3px;}
+.cover .tagline{font-size:22px;color:rgba(255,255,255,0.5);margin-bottom:60px;font-weight:300;letter-spacing:1px;}
+.metrics-row{display:flex;gap:2px;margin-bottom:60px;border:1px solid rgba(255,255,255,0.07);border-radius:16px;overflow:hidden;width:100%;max-width:700px;}
+.metric-box{flex:1;padding:28px 20px;background:rgba(255,255,255,0.03);text-align:center;border-right:1px solid rgba(255,255,255,0.06);}
+.metric-box:last-child{border-right:none;}
+.metric-num{font-size:34px;font-weight:800;color:#00c2ff;display:block;margin-bottom:6px;}
+.metric-label{font-size:10px;color:rgba(255,255,255,0.35);text-transform:uppercase;letter-spacing:1.5px;}
+.tags-row{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-bottom:48px;}
+.tag{padding:8px 18px;border-radius:50px;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:1px;}
+.tag-blue{background:rgba(37,99,235,0.15);color:#60a5fa;border:1px solid rgba(37,99,235,0.25);}
+.tag-green{background:rgba(22,163,74,0.15);color:#4ade80;border:1px solid rgba(22,163,74,0.25);}
+.tag-purple{background:rgba(124,58,237,0.15);color:#c084fc;border:1px solid rgba(124,58,237,0.25);}
+.tag-orange{background:rgba(234,88,12,0.15);color:#fb923c;border:1px solid rgba(234,88,12,0.25);}
+.scroll-hint{font-size:12px;color:rgba(255,255,255,0.2);letter-spacing:2px;text-transform:uppercase;}
+
+/* SLIDE HEADERS */
+.slide-num{font-size:11px;color:#00c2ff;letter-spacing:3px;text-transform:uppercase;margin-bottom:12px;font-weight:600;}
+.slide-title{font-size:52px;font-weight:800;color:#fff;margin-bottom:12px;line-height:1.1;}
+.slide-sub{font-size:16px;color:rgba(255,255,255,0.4);margin-bottom:0;font-weight:300;}
+.accent-bar{width:60px;height:4px;background:linear-gradient(90deg,#00c2ff,#7b61ff);border-radius:2px;margin:20px 0 44px;}
+
+/* PROBLEM */
+.problem{background:linear-gradient(180deg,#0a0e1a 0%,#0d1224 100%);}
+.stat-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:40px;}
+.stat-card{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);border-radius:16px;padding:32px 24px;text-align:center;}
+.stat-card .big-num{font-size:52px;font-weight:900;background:linear-gradient(135deg,#00c2ff,#7b61ff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;display:block;margin-bottom:10px;}
+.stat-card .big-label{font-size:13px;color:rgba(255,255,255,0.45);line-height:1.4;}
+.problem-points{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:32px;}
+.problem-point{display:flex;align-items:flex-start;gap:16px;background:rgba(234,88,12,0.05);border:1px solid rgba(234,88,12,0.15);border-radius:12px;padding:20px;}
+.prob-icon{width:42px;height:42px;border-radius:10px;background:rgba(234,88,12,0.1);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;}
+.prob-text{font-size:14px;color:rgba(255,255,255,0.65);line-height:1.5;}
+.highlight-box{background:linear-gradient(135deg,rgba(0,194,255,0.06),rgba(123,97,255,0.06));border:1px solid rgba(0,194,255,0.15);border-left:4px solid #00c2ff;border-radius:0 12px 12px 0;padding:20px 28px;font-size:15px;color:rgba(255,255,255,0.75);line-height:1.6;font-style:italic;}
+
+/* SOLUTION */
+.solution{background:#0a0e1a;}
+.solution-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:28px;}
+.sol-card{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);border-radius:16px;padding:28px 22px;transition:border-color 0.3s;}
+.sol-card:hover{border-color:rgba(0,194,255,0.25);}
+.sol-card-header{display:flex;align-items:center;gap:12px;margin-bottom:18px;}
+.sol-icon{width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:20px;}
+.sol-icon-blue{background:rgba(0,194,255,0.12);}
+.sol-icon-purple{background:rgba(123,97,255,0.12);}
+.sol-icon-green{background:rgba(27,175,122,0.12);}
+.sol-card h3{font-size:14px;font-weight:700;color:#fff;text-transform:uppercase;letter-spacing:0.5px;}
+.sol-list{list-style:none;display:flex;flex-direction:column;gap:9px;}
+.sol-list li{font-size:13px;color:rgba(255,255,255,0.55);padding-left:18px;position:relative;line-height:1.5;}
+.sol-list li::before{content:'→';position:absolute;left:0;color:#00c2ff;font-size:11px;top:1px;}
+.earn-banner{background:linear-gradient(135deg,rgba(27,175,122,0.08),rgba(0,194,255,0.08));border:1px solid rgba(27,175,122,0.2);border-radius:12px;padding:22px 28px;display:flex;align-items:center;justify-content:space-between;}
+.earn-text{font-size:16px;color:rgba(255,255,255,0.75);font-weight:500;}
+.earn-badge{background:rgba(27,175,122,0.15);border:1px solid rgba(27,175,122,0.35);border-radius:50px;padding:8px 20px;font-size:13px;font-weight:700;color:#1baf7a;white-space:nowrap;}
+
+/* TRACTION */
+.traction{background:linear-gradient(180deg,#0a0e1a 0%,#0d1224 100%);}
+.traction-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:28px;}
+.traction-item{display:flex;align-items:center;gap:16px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);border-radius:12px;padding:18px 20px;transition:border-color 0.3s;}
+.traction-item:hover{border-color:rgba(0,194,255,0.2);}
+.traction-badge{font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:5px 10px;border-radius:6px;white-space:nowrap;min-width:76px;text-align:center;}
+.badge-blue{background:rgba(0,194,255,0.12);color:#00c2ff;}
+.badge-green{background:rgba(27,175,122,0.12);color:#1baf7a;}
+.badge-purple{background:rgba(123,97,255,0.12);color:#a78bfa;}
+.badge-orange{background:rgba(234,88,12,0.12);color:#fb923c;}
+.traction-desc{font-size:13px;color:rgba(255,255,255,0.6);line-height:1.4;}
+.market-row{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+.market-card{background:linear-gradient(135deg,rgba(0,194,255,0.05),rgba(123,97,255,0.05));border:1px solid rgba(0,194,255,0.1);border-radius:12px;padding:24px;text-align:center;}
+.market-val{font-size:32px;font-weight:800;color:#00c2ff;display:block;margin-bottom:6px;}
+.market-desc{font-size:12px;color:rgba(255,255,255,0.4);line-height:1.5;}
+
+/* BUSINESS MODEL */
+.bizmodel{background:#0a0e1a;}
+.streams-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:28px;}
+.stream-card{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);border-radius:14px;padding:24px;display:flex;gap:16px;align-items:flex-start;transition:border-color 0.3s;}
+.stream-card:hover{border-color:rgba(0,194,255,0.2);}
+.stream-num{font-size:36px;font-weight:900;color:rgba(0,194,255,0.18);line-height:1;flex-shrink:0;font-family:monospace;}
+.stream-content h4{font-size:13px;font-weight:700;color:#fff;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:8px;}
+.stream-content p{font-size:13px;color:rgba(255,255,255,0.5);line-height:1.5;margin-bottom:12px;}
+.status-pill{display:inline-block;padding:4px 12px;border-radius:50px;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;}
+.pill-active{background:rgba(27,175,122,0.15);color:#1baf7a;border:1px solid rgba(27,175,122,0.25);}
+.pill-ready{background:rgba(234,161,0,0.15);color:#fbbf24;border:1px solid rgba(234,161,0,0.25);}
+.econ-table{background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.07);border-radius:14px;overflow:hidden;}
+.econ-row{display:grid;grid-template-columns:1.2fr 1fr 1.2fr 1.2fr;padding:14px 24px;border-bottom:1px solid rgba(255,255,255,0.05);font-size:13px;}
+.econ-row:last-child{border-bottom:none;}
+.econ-row.header{background:rgba(0,194,255,0.06);color:#00c2ff;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;}
+.econ-row.data{color:rgba(255,255,255,0.6);}
+.econ-row .revenue{color:#1baf7a;font-weight:700;}
+
+/* ASK */
+.ask{background:linear-gradient(180deg,#0a0e1a 0%,#0d1224 100%);}
+.ask-hero{display:flex;gap:2px;margin-bottom:36px;border:1px solid rgba(255,255,255,0.07);border-radius:16px;overflow:hidden;}
+.ask-box{flex:1;padding:36px 24px;background:rgba(255,255,255,0.03);text-align:center;border-right:1px solid rgba(255,255,255,0.05);}
+.ask-box:last-child{border-right:none;}
+.ask-box.featured{background:rgba(0,194,255,0.07);}
+.ask-val{font-size:40px;font-weight:900;color:#00c2ff;display:block;margin-bottom:8px;line-height:1;}
+.ask-label{font-size:11px;color:rgba(255,255,255,0.35);text-transform:uppercase;letter-spacing:1.5px;}
+.ask-two-col{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:32px;}
+.ask-section h4{font-size:12px;font-weight:700;color:#00c2ff;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:16px;}
+.fund-row{display:flex;justify-content:space-between;align-items:center;padding:11px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:13px;}
+.fund-row:last-child{border-bottom:none;}
+.fund-pct{font-weight:700;color:#00c2ff;font-size:15px;}
+.fund-label{color:rgba(255,255,255,0.55);}
+.fund-amt{color:rgba(255,255,255,0.3);font-size:12px;}
+.milestone-row{display:flex;flex-direction:column;}
+.milestone-item{display:flex;align-items:center;gap:12px;padding:11px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:13px;color:rgba(255,255,255,0.55);}
+.milestone-item:last-child{border-bottom:none;}
+.check-icon{color:#1baf7a;font-size:15px;font-weight:700;flex-shrink:0;}
+.contact-footer{background:linear-gradient(135deg,rgba(0,194,255,0.06),rgba(123,97,255,0.06));border:1px solid rgba(0,194,255,0.12);border-radius:14px;padding:28px 36px;display:flex;align-items:center;justify-content:space-between;}
+.contact-info h3{font-size:18px;font-weight:700;color:#fff;margin-bottom:5px;}
+.contact-info p{font-size:13px;color:rgba(255,255,255,0.4);}
+.contact-links{display:flex;flex-direction:column;gap:6px;text-align:right;}
+.contact-links a{font-size:13px;color:#00c2ff;text-decoration:none;}
+.contact-links a:hover{text-decoration:underline;}
+.contact-links span{font-size:12px;color:rgba(255,255,255,0.25);}
+
+/* FOOTER */
+footer{background:#060810;padding:32px 80px;display:flex;justify-content:space-between;align-items:center;border-top:1px solid rgba(255,255,255,0.05);}
+footer p{font-size:12px;color:rgba(255,255,255,0.2);}
+footer a{font-size:12px;color:#00c2ff;text-decoration:none;}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">Mind<span>Battle</span></div>
+  <div class="nav-links">
+    <a href="#problem">Problem</a>
+    <a href="#solution">Solution</a>
+    <a href="#traction">Traction</a>
+    <a href="#model">Model</a>
+    <a href="#ask">The Ask</a>
+  </div>
+  <a href="mailto:admin@mind-battle.com" class="nav-cta">Contact Us</a>
+</nav>
+
+<!-- COVER -->
+<div class="section cover" id="cover">
+  <div class="live-badge"><span class="live-dot"></span>Live on Google Play, Revenue Active</div>
+  <h1>MindBattle</h1>
+  <p class="tagline">Competitive Trivia. Real Rewards. Real Revenue.</p>
+  <div class="metrics-row">
+    <div class="metric-box"><span class="metric-num">$15K</span><span class="metric-label">Raising</span></div>
+    <div class="metric-box"><span class="metric-num">15%</span><span class="metric-label">Equity</span></div>
+    <div class="metric-box"><span class="metric-num">$100K</span><span class="metric-label">Pre-Money Val.</span></div>
+    <div class="metric-box"><span class="metric-num">500M+</span><span class="metric-label">Target Market</span></div>
+  </div>
+  <div class="tags-row">
+    <span class="tag tag-blue">Mobile Gaming</span>
+    <span class="tag tag-green">EdTech</span>
+    <span class="tag tag-purple">Social Impact</span>
+    <span class="tag tag-orange">Fintech</span>
+  </div>
+  <p class="scroll-hint">↓ Scroll to explore</p>
+  <p style="margin-top:20px;font-size:11px;color:rgba(255,255,255,0.15);">SAFE Note, Cognira LLC, Wyoming USA, EIN: 30-1499307, D-U-N-S: 147595241</p>
+</div>
+
+<!-- PROBLEM -->
+<div class="section problem" id="problem">
+  <div class="slide-num">01 / 05, The Problem</div>
+  <h2 class="slide-title">500 million students.<br>Zero earning platforms.</h2>
+  <div class="accent-bar"></div>
+  <div class="stat-cards">
+    <div class="stat-card"><span class="big-num">500M+</span><span class="big-label">Students in South Asia with smartphones and knowledge</span></div>
+    <div class="stat-card"><span class="big-num">0</span><span class="big-label">Accessible platforms that reward them with real money</span></div>
+    <div class="stat-card"><span class="big-num">$0</span><span class="big-label">Average part-time student income in Tier 2 and 3 cities</span></div>
+  </div>
+  <div class="problem-points">
+    <div class="problem-point"><div class="prob-icon">📱</div><p class="prob-text">Students own smartphones and possess real knowledge, but no platform rewards them for it</p></div>
+    <div class="problem-point"><div class="prob-icon">🏙️</div><p class="prob-text">Traditional part-time job markets do not exist in rural and semi-urban South Asia</p></div>
+    <div class="problem-point"><div class="prob-icon">💻</div><p class="prob-text">Freelancing requires technical skills most students simply do not have yet</p></div>
+    <div class="problem-point"><div class="prob-icon">🎮</div><p class="prob-text">Existing quiz apps offer points or virtual prizes, never real withdrawable money</p></div>
+  </div>
+  <div class="highlight-box">"An entire generation of students sitting on untapped earning potential, with nowhere to redirect it."</div>
+</div>
+
+<!-- SOLUTION -->
+<div class="section solution" id="solution">
+  <div class="slide-num">02 / 05, The Solution</div>
+  <h2 class="slide-title">MindBattle turns<br>knowledge into income.</h2>
+  <div class="accent-bar"></div>
+  <div class="solution-grid">
+    <div class="sol-card">
+      <div class="sol-card-header"><div class="sol-icon sol-icon-blue">⚔️</div><h3>How It Works</h3></div>
+      <ul class="sol-list">
+        <li>Challenge real opponents in 1v1 battles</li>
+        <li>Answer trivia across multiple categories</li>
+        <li>Win Coins for every correct answer</li>
+        <li>Compete in daily challenges</li>
+        <li>Unlock 13 achievement milestones</li>
+      </ul>
+    </div>
+    <div class="sol-card">
+      <div class="sol-card-header"><div class="sol-icon sol-icon-purple">💰</div><h3>Earning System</h3></div>
+      <ul class="sol-list">
+        <li>1,000 Coins equals $1 USD real money</li>
+        <li>Withdraw via Payoneer or USDT</li>
+        <li>Earn from offerwall surveys and offers</li>
+        <li>Referral bonuses for sharing</li>
+        <li>Battle prize pools for top players</li>
+      </ul>
+    </div>
+    <div class="sol-card">
+      <div class="sol-card-header"><div class="sol-icon sol-icon-green">🌍</div><h3>User Benefits</h3></div>
+      <ul class="sol-list">
+        <li>Real withdrawable money, not points</li>
+        <li>No technical skills required</li>
+        <li>Works on any Android phone</li>
+        <li>Available across South Asia</li>
+        <li>Free to download and play</li>
+      </ul>
+    </div>
+  </div>
+  <div class="earn-banner">
+    <span class="earn-text">Live on Google Play Store, active users earning real rewards today</span>
+    <span class="earn-badge">✓ Revenue Active</span>
+  </div>
+</div>
+
+<!-- TRACTION -->
+<div class="section traction" id="traction">
+  <div class="slide-num">03 / 05, Traction</div>
+  <h2 class="slide-title">Live. Revenue. Zero<br>external funding.</h2>
+  <div class="accent-bar"></div>
+  <div class="traction-grid">
+    <div class="traction-item"><span class="traction-badge badge-blue">Live</span><span class="traction-desc">App available on Google Play Store with active users onboarded organically</span></div>
+    <div class="traction-item"><span class="traction-badge badge-green">Revenue</span><span class="traction-desc">Advertising revenue generating from day one, zero paid user acquisition</span></div>
+    <div class="traction-item"><span class="traction-badge badge-purple">Legal</span><span class="traction-desc">Cognira LLC registered in Wyoming USA. EIN: 30-1499307, D-U-N-S: 147595241</span></div>
+    <div class="traction-item"><span class="traction-badge badge-green">Banking</span><span class="traction-desc">Wise Business account active, ready to receive Google Play payouts</span></div>
+    <div class="traction-item"><span class="traction-badge badge-orange">Capital</span><span class="traction-desc">Built entirely by a non-developer founder using AI tools, showing extreme capital efficiency</span></div>
+    <div class="traction-item"><span class="traction-badge badge-blue">Clean</span><span class="traction-desc">Reached live product milestone with $0 external funding, zero debt and zero dilution</span></div>
+  </div>
+  <div class="market-row">
+    <div class="market-card"><span class="market-val">28%</span><span class="market-desc">South Asian mobile gaming market annual growth rate</span></div>
+    <div class="market-card"><span class="market-val">500M+</span><span class="market-desc">Total addressable students with smartphones in target region</span></div>
+    <div class="market-card"><span class="market-val">4.2h</span><span class="market-desc">Average daily mobile usage in Tier 2 and 3 cities, our prime audience</span></div>
+  </div>
+</div>
+
+<!-- BUSINESS MODEL -->
+<div class="section bizmodel" id="model">
+  <div class="slide-num">04 / 05, Business Model</div>
+  <h2 class="slide-title">Four revenue streams.<br>All active or ready.</h2>
+  <div class="accent-bar"></div>
+  <div class="streams-grid">
+    <div class="stream-card"><span class="stream-num">01</span><div class="stream-content"><h4>In-App Advertising</h4><p>AdMob display and rewarded ads shown during gameplay. Revenue scales directly with user growth, no ceiling.</p><span class="status-pill pill-active">Active</span></div></div>
+    <div class="stream-card"><span class="stream-num">02</span><div class="stream-content"><h4>Offerwall Commissions</h4><p>Users complete surveys via CPX Research, Lootably and AdGate. We earn 30% commission on every completion.</p><span class="status-pill pill-ready">Ready to Launch</span></div></div>
+    <div class="stream-card"><span class="stream-num">03</span><div class="stream-content"><h4>Battle Entry Fees</h4><p>Premium battles require a Coin entry fee, creating a house margin on every single game played.</p><span class="status-pill pill-active">Active</span></div></div>
+    <div class="stream-card"><span class="stream-num">04</span><div class="stream-content"><h4>Referral Network Effect</h4><p>Each referred user generates lifetime ad revenue that far exceeds the referral payout cost.</p><span class="status-pill pill-active">Active</span></div></div>
+  </div>
+  <div class="econ-table">
+    <div class="econ-row header"><span>Monthly Active Users</span><span>ARPU</span><span>Monthly Revenue</span><span>Annual Revenue</span></div>
+    <div class="econ-row data"><span>1,000 MAU</span><span>$0.50</span><span class="revenue">$500</span><span class="revenue">$6,000</span></div>
+    <div class="econ-row data"><span>10,000 MAU</span><span>$0.50</span><span class="revenue">$5,000</span><span class="revenue">$60,000</span></div>
+    <div class="econ-row data"><span>50,000 MAU</span><span>$0.50</span><span class="revenue">$25,000</span><span class="revenue">$300,000</span></div>
+  </div>
+</div>
+
+<!-- ASK -->
+<div class="section ask" id="ask">
+  <div class="slide-num">05 / 05, The Ask</div>
+  <h2 class="slide-title">$15,000 for 15%.<br>SAFE Note.</h2>
+  <div class="accent-bar"></div>
+  <div class="ask-hero">
+    <div class="ask-box featured"><span class="ask-val">$15,000</span><span class="ask-label">Raising</span></div>
+    <div class="ask-box"><span class="ask-val">15%</span><span class="ask-label">Equity</span></div>
+    <div class="ask-box"><span class="ask-val">$100K</span><span class="ask-label">Pre-Money Val.</span></div>
+    <div class="ask-box"><span class="ask-val">SAFE</span><span class="ask-label">Structure</span></div>
+  </div>
+  <div class="ask-two-col">
+    <div class="ask-section">
+      <h4>Use of Funds</h4>
+      <div class="fund-row"><span class="fund-pct">60%</span><span class="fund-label">User acquisition campaigns</span><span class="fund-amt">$9,000</span></div>
+      <div class="fund-row"><span class="fund-pct">25%</span><span class="fund-label">Offerwall integration</span><span class="fund-amt">$3,750</span></div>
+      <div class="fund-row"><span class="fund-pct">15%</span><span class="fund-label">Infrastructure scaling</span><span class="fund-amt">$2,250</span></div>
+    </div>
+    <div class="ask-section">
+      <h4>90-Day Milestones</h4>
+      <div class="milestone-row">
+        <div class="milestone-item"><span class="check-icon">✓</span><span>500 to 10,000 Monthly Active Users</span></div>
+        <div class="milestone-item"><span class="check-icon">✓</span><span>$500 to $5,000 monthly revenue</span></div>
+        <div class="milestone-item"><span class="check-icon">✓</span><span>Full public launch on Google Play</span></div>
+        <div class="milestone-item"><span class="check-icon">✓</span><span>All 4 revenue streams live</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="contact-footer">
+    <div class="contact-info">
+      <h3>Wajid Mehmood Bukhari</h3>
+      <p>Founder and CEO, Cognira LLC. Pre-Seed Round, July 2026</p>
+    </div>
+    <div class="contact-links">
+      <a href="mailto:admin@mind-battle.com">admin@mind-battle.com</a>
+      <a href="https://mind-battle.com" target="_blank">mind-battle.com</a>
+      <span>+92 310 590 3604</span>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p>© 2026 Cognira LLC. All rights reserved. Wyoming USA.</p>
+  <a href="mailto:admin@mind-battle.com">admin@mind-battle.com</a>
+</footer>
+
+</body>
+</html>
