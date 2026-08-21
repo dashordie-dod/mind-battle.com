@@ -1,165 +1,534 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Privacy Policy — MindBattle</title>
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { background: #0E0E16; color: #E4E1ED; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 16px; line-height: 1.7; padding: 0 0 60px; }
-    header { background: #13131B; border-bottom: 1px solid #2A2B3A; padding: 20px 24px; display: flex; align-items: center; gap: 12px; position: sticky; top: 0; z-index: 10; }
-    .logo-mark { width: 36px; height: 36px; }
-    .brand { font-size: 20px; font-weight: 700; color: #FF7A29; letter-spacing: -0.3px; }
-    .brand span { color: #E4E1ED; }
-    .container { max-width: 760px; margin: 0 auto; padding: 40px 24px 0; }
-    .page-title { font-size: 28px; font-weight: 700; color: #E4E1ED; margin-bottom: 6px; }
-    .effective { font-size: 13px; color: #A78B7E; margin-bottom: 36px; }
-    .badge { display: inline-block; background: rgba(69,223,164,0.1); border: 1px solid rgba(69,223,164,0.3); color: #45DFA4; font-size: 12px; font-weight: 600; letter-spacing: 0.05em; padding: 4px 10px; border-radius: 20px; margin-bottom: 16px; text-transform: uppercase; }
-    .notice { background: #1B1C28; border: 1px solid #2A2B3A; border-left: 3px solid #45DFA4; border-radius: 10px; padding: 16px 20px; margin-bottom: 36px; font-size: 14px; color: #E0C0B2; }
-    h2 { font-size: 18px; font-weight: 700; color: #E4E1ED; margin: 36px 0 12px; padding-bottom: 8px; border-bottom: 1px solid #2A2B3A; }
-    h3 { font-size: 15px; font-weight: 600; color: #45DFA4; margin: 20px 0 8px; }
-    p { margin-bottom: 14px; color: #C8C5D4; }
-    ul { margin: 0 0 16px 20px; color: #C8C5D4; }
-    li { margin-bottom: 8px; }
-    table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 14px; }
-    th { background: #1B1C28; color: #A78B7E; font-weight: 600; text-align: left; padding: 10px 14px; border: 1px solid #2A2B3A; font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; }
-    td { padding: 10px 14px; border: 1px solid #2A2B3A; color: #C8C5D4; vertical-align: top; }
-    a { color: #45DFA4; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    footer { margin-top: 60px; padding: 24px; text-align: center; border-top: 1px solid #2A2B3A; color: #A78B7E; font-size: 13px; }
-  </style>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Privacy Policy — MindBattle</title>
+<meta name="description" content="How MindBattle collects, uses, retains and protects your personal data. Operated by Cognira LLC."/>
+<meta name="theme-color" content="#0D0D15"/>
+<link rel="canonical" href="https://mind-battle.com/privacy.html"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#0D0D15; --bg-card:#16161F;
+  --ink:#FFFFFF; --mute:#A9AEC0; --label:#9BA1B6; --dim:#8B90A6;
+  --or:#FF7A29; --or-soft:#FFB692; --in:#5B5FEF; --in-text:#A5A8FF; --em:#45DFA4; --red:#FF9090;
+  --line:rgba(255,255,255,.08); --line-2:rgba(255,255,255,.14);
+  --out:cubic-bezier(.23,1,.32,1); --drawer:cubic-bezier(.32,.72,0,1);
+  --r-sm:12px; --r:18px; --r-lg:26px; --r-xl:34px; --gut:32px;
+}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;scroll-padding-top:110px}
+body{background:var(--bg);color:var(--ink);font-family:'Inter',system-ui,sans-serif;font-size:16px;
+  line-height:1.7;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
+svg{display:block}
+:focus-visible{outline:2px solid var(--or);outline-offset:3px;border-radius:4px}
+::selection{background:rgba(255,122,41,.3)}
+.skip{position:absolute;left:-9999px;top:12px;z-index:200;background:var(--or);color:#160B02;
+  padding:10px 18px;border-radius:10px;font-weight:600}
+.skip:focus{left:16px}
+.grain{position:fixed;inset:0;z-index:90;pointer-events:none;opacity:.03;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='4'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.prog{position:fixed;top:0;left:0;height:2px;width:100%;transform:scaleX(0);transform-origin:0 50%;
+  background:linear-gradient(90deg,var(--or),#FFB067);z-index:95;will-change:transform}
+.wrap{max-width:1180px;margin:0 auto;padding:0 var(--gut)}
+.mono{font-family:'JetBrains Mono',monospace;font-variant-numeric:tabular-nums}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:10px;font-family:'Sora',sans-serif;font-weight:600;
+  font-size:14.5px;letter-spacing:-.01em;padding:13px 15px 13px 24px;border-radius:100px;
+  transition:transform 160ms var(--out),background 200ms var(--out),border-color 200ms var(--out),box-shadow 260ms var(--out)}
+.btn:active{transform:scale(.97)}
+.btn .ar{width:28px;height:28px;border-radius:50%;display:grid;place-items:center;font-size:12px;
+  transition:transform 200ms var(--out)}
+.btn:hover .ar{transform:translate(2px,-2px)}
+.btn--fill{background:var(--or);color:#170B02;box-shadow:0 10px 30px -8px rgba(255,122,41,.5)}
+.btn--fill:hover{background:#FF8C48;box-shadow:0 16px 42px -8px rgba(255,122,41,.62)}
+.btn--fill .ar{background:rgba(23,11,2,.16)}
+.btn--line{border:1px solid var(--line-2)}
+.btn--line:hover{border-color:rgba(255,255,255,.32);background:rgba(255,255,255,.03)}
+.btn--line .ar{background:rgba(255,255,255,.07)}
+.btn--sm{font-size:13px;padding:10px 12px 10px 19px}
+.btn--sm .ar{width:24px;height:24px}
+
+/* nav */
+.navbar{position:fixed;top:16px;left:0;right:0;z-index:80;display:flex;justify-content:center;
+  padding:0 20px;transition:top 300ms var(--out)}
+.navbar.tight{top:8px}
+.pill{display:flex;align-items:center;gap:30px;background:rgba(15,15,23,.72);border:1px solid var(--line);
+  border-radius:100px;padding:9px 9px 9px 22px;backdrop-filter:blur(22px) saturate(140%);
+  -webkit-backdrop-filter:blur(22px) saturate(140%);box-shadow:0 12px 40px -12px rgba(0,0,0,.7);
+  transition:box-shadow 300ms var(--out),border-color 300ms var(--out)}
+.navbar.tight .pill{border-color:var(--line-2);box-shadow:0 18px 52px -14px rgba(0,0,0,.85)}
+.brand{display:flex;align-items:center;gap:9px;font-family:'Sora',sans-serif;font-weight:700;
+  font-size:15.5px;letter-spacing:-.025em}
+.brand svg{width:24px;height:24px;flex-shrink:0}
+.navlinks{display:flex;gap:26px;list-style:none}
+.navlinks a{font-size:13.5px;color:var(--mute);position:relative;transition:color 200ms var(--out)}
+.navlinks a::after{content:'';position:absolute;left:0;right:0;bottom:-6px;height:1px;background:var(--or);
+  transform:scaleX(0);transform-origin:0 50%;transition:transform 240ms var(--out)}
+.navlinks a:hover{color:var(--ink)}
+.navlinks a:hover::after{transform:scaleX(1)}
+.navlinks a.here{color:var(--ink)}
+.navlinks a.here::after{transform:scaleX(1)}
+.burger{display:none;width:40px;height:40px;border-radius:50%;border:1px solid var(--line);position:relative;flex-shrink:0}
+.burger i{position:absolute;left:11px;width:18px;height:1.5px;background:var(--ink);border-radius:2px;
+  transition:transform 260ms var(--drawer)}
+.burger i:nth-child(1){top:16px}.burger i:nth-child(2){top:22px}
+.burger.x i:nth-child(1){transform:translateY(3px) rotate(45deg)}
+.burger.x i:nth-child(2){transform:translateY(-3px) rotate(-45deg)}
+.sheet{position:fixed;inset:0;z-index:79;background:rgba(9,9,14,.92);backdrop-filter:blur(28px);
+  -webkit-backdrop-filter:blur(28px);display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:6px;opacity:0;pointer-events:none;transition:opacity 260ms var(--out)}
+.sheet.open{opacity:1;pointer-events:auto}
+.sheet a{font-family:'Sora',sans-serif;font-size:27px;font-weight:700;letter-spacing:-.04em;padding:11px 0;
+  opacity:0;transform:translateY(16px);transition:opacity 320ms var(--out),transform 320ms var(--out)}
+.sheet.open a{opacity:1;transform:none}
+.sheet.open a:nth-child(1){transition-delay:60ms}.sheet.open a:nth-child(2){transition-delay:100ms}
+.sheet.open a:nth-child(3){transition-delay:140ms}.sheet.open a:nth-child(4){transition-delay:180ms}
+.sheet.open a:nth-child(5){transition-delay:220ms}
+.sheet .btn{margin-top:22px;transition-delay:260ms}
+
+/* page header */
+.phead{padding:146px 0 0;position:relative;overflow:hidden}
+.phead .cone{position:absolute;top:-380px;left:50%;transform:translateX(-50%);width:1200px;height:900px;
+  pointer-events:none;background:radial-gradient(ellipse 42% 40% at 50% 32%,rgba(255,122,41,.16),transparent 64%)}
+.phead .mesh{position:absolute;inset:0;pointer-events:none;opacity:.45;
+  -webkit-mask-image:radial-gradient(ellipse 56% 44% at 50% 10%,#000,transparent 70%);
+  mask-image:radial-gradient(ellipse 56% 44% at 50% 10%,#000,transparent 70%);
+  background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);
+  background-size:62px 62px}
+.phead .in{position:relative;z-index:1}
+.tagline{display:inline-flex;align-items:center;gap:9px;border-radius:100px;padding:7px 16px;
+  font-family:'JetBrains Mono',monospace;font-size:11.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
+.tagline.legal{border:1px solid rgba(255,122,41,.32);background:rgba(255,122,41,.09);color:var(--or)}
+.tagline.priv{border:1px solid rgba(69,223,164,.3);background:rgba(69,223,164,.08);color:var(--em)}
+.tagline.help{border:1px solid rgba(91,95,239,.36);background:rgba(91,95,239,.1);color:var(--in-text)}
+.tagline.acct{border:1px solid rgba(255,144,144,.32);background:rgba(255,144,144,.08);color:var(--red)}
+h1{font-family:'Sora',sans-serif;font-size:clamp(36px,5.2vw,62px);font-weight:800;line-height:1.02;
+  letter-spacing:-.048em;margin-top:22px;text-wrap:balance}
+.eff{font-family:'JetBrains Mono',monospace;font-size:12.5px;color:var(--label);margin-top:16px;letter-spacing:.04em}
+.notice{margin-top:34px;border:1px solid var(--line);border-left:3px solid var(--or);
+  border-radius:var(--r);padding:20px 24px;font-size:15px;color:var(--mute);line-height:1.72;
+  background:linear-gradient(90deg,rgba(255,122,41,.06),transparent 60%);max-width:74ch}
+.notice.priv{border-left-color:var(--em);background:linear-gradient(90deg,rgba(69,223,164,.06),transparent 60%)}
+.notice.acct{border-left-color:var(--red);background:linear-gradient(90deg,rgba(255,144,144,.06),transparent 60%)}
+.notice strong{color:var(--ink)}
+
+/* doc layout */
+.doc{display:grid;grid-template-columns:230px 1fr;gap:64px;padding:72px 0 120px;align-items:start}
+.toc{position:sticky;top:110px}
+.toc h4{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--label);margin-bottom:16px}
+.toc ul{list-style:none;display:flex;flex-direction:column;gap:2px;border-left:1px solid var(--line)}
+.toc a{display:block;font-size:13.5px;color:var(--mute);padding:7px 0 7px 16px;margin-left:-1px;
+  border-left:1px solid transparent;transition:color 200ms var(--out),border-color 200ms var(--out)}
+.toc a:hover{color:var(--ink)}
+.toc a.on{color:var(--or);border-left-color:var(--or)}
+.body{max-width:74ch;min-width:0}
+.body h2{font-family:'Sora',sans-serif;font-size:clamp(21px,2.4vw,26px);font-weight:700;letter-spacing:-.03em;
+  line-height:1.24;margin:56px 0 16px;padding-bottom:14px;border-bottom:1px solid var(--line);scroll-margin-top:110px}
+.body h2:first-child{margin-top:0}
+.body h2 .num{font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--or);
+  margin-right:12px;font-weight:500;vertical-align:2px}
+.body h3{font-family:'Sora',sans-serif;font-size:16.5px;font-weight:600;color:var(--or-soft);
+  margin:30px 0 10px;letter-spacing:-.02em}
+.body p{color:var(--mute);margin-bottom:16px;font-size:15.5px;line-height:1.78}
+.body strong{color:var(--ink);font-weight:600}
+.body ul,.body ol{margin:0 0 20px 4px;color:var(--mute);list-style:none}
+.body ol{counter-reset:o}
+.body ul li,.body ol li{position:relative;padding-left:24px;margin-bottom:10px;font-size:15.5px;line-height:1.72}
+.body ul li::before{content:'';position:absolute;left:4px;top:11px;width:6px;height:6px;border-radius:50%;
+  background:rgba(255,122,41,.55)}
+.body ol li{counter-increment:o}
+.body ol li::before{content:counter(o);position:absolute;left:0;top:0;font-family:'JetBrains Mono',monospace;
+  font-size:12px;color:var(--or)}
+.body a{color:var(--or);border-bottom:1px solid rgba(255,122,41,.32);transition:border-color 200ms var(--out)}
+.body a:hover{border-color:var(--or)}
+.tblwrap{overflow-x:auto;margin:20px 0 24px;border:1px solid var(--line);border-radius:var(--r)}
+.body table{width:100%;border-collapse:collapse;font-size:14.5px;min-width:440px}
+.body th{background:rgba(255,255,255,.035);color:var(--label);font-family:'JetBrains Mono',monospace;
+  font-size:10.5px;font-weight:700;text-align:left;padding:14px 18px;text-transform:uppercase;letter-spacing:.13em;
+  border-bottom:1px solid var(--line)}
+.body td{padding:14px 18px;border-bottom:1px solid rgba(255,255,255,.05);color:var(--mute);vertical-align:top;line-height:1.62}
+.body tr:last-child td{border-bottom:none}
+.body tbody tr{transition:background 200ms var(--out)}
+.body tbody tr:hover{background:rgba(255,255,255,.02)}
+.green{color:var(--em);font-weight:600}
+.red{color:var(--red);font-weight:600}
+.orange{color:var(--or);font-weight:600}
+.callout{border:1px solid var(--line);background:rgba(255,255,255,.026);border-radius:var(--r);
+  padding:20px 24px;margin:20px 0 24px}
+.callout p:last-child{margin-bottom:0}
+.callout.warn{border-color:rgba(255,122,41,.24);background:rgba(255,122,41,.06)}
+.callout.warn p{color:var(--or-soft)}
+.callout.good{border-color:rgba(69,223,164,.24);background:rgba(69,223,164,.06)}
+.callout.good p{color:#9DEFCC}
+
+/* steps */
+.step{display:grid;grid-template-columns:auto 1fr;gap:20px;align-items:flex-start;
+  border:1px solid var(--line);border-radius:var(--r-lg);padding:24px 26px;margin-bottom:12px;
+  background:linear-gradient(180deg,var(--bg-card),#101019);
+  transition:border-color 300ms var(--out),transform 300ms var(--out)}
+.step:hover{border-color:rgba(255,122,41,.3);transform:translateY(-2px)}
+.step .sn{width:32px;height:32px;border-radius:50%;background:rgba(255,122,41,.13);
+  border:1px solid rgba(255,122,41,.34);color:var(--or);display:grid;place-items:center;
+  font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:700;flex-shrink:0}
+.step h4{font-family:'Sora',sans-serif;font-size:16.5px;font-weight:600;margin-bottom:6px;letter-spacing:-.02em}
+.step p{margin-bottom:0;font-size:14.5px}
+
+/* faq */
+.faqbar{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-bottom:32px}
+.search{flex:1;min-width:240px;position:relative}
+.search input{width:100%;background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:100px;
+  padding:14px 20px 14px 46px;font-family:'Inter',sans-serif;font-size:15px;color:var(--ink);outline:none;
+  transition:border-color 200ms var(--out),box-shadow 200ms var(--out),background 200ms var(--out)}
+.search input::placeholder{color:#7C8196}
+.search input:focus{border-color:var(--or);background:rgba(255,122,41,.04);box-shadow:0 0 0 3px rgba(255,122,41,.12)}
+.search svg{position:absolute;left:18px;top:50%;transform:translateY(-50%);width:17px;height:17px;
+  stroke:var(--label);fill:none;stroke-width:1.9}
+.chips{display:flex;gap:7px;flex-wrap:wrap}
+.chip{border:1px solid var(--line);border-radius:100px;padding:9px 16px;font-size:13px;color:var(--mute);
+  transition:all 200ms var(--out)}
+.chip:hover{border-color:var(--line-2);color:var(--ink)}
+.chip.on{background:var(--or);border-color:var(--or);color:#170B02;font-weight:600}
+.fgroup{margin-bottom:40px}
+.fgroup > h3{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--label);margin:0 0 16px;padding-bottom:12px;border-bottom:1px solid var(--line);
+  scroll-margin-top:110px}
+.qa{border:1px solid var(--line);border-radius:var(--r);margin-bottom:9px;overflow:hidden;
+  background:linear-gradient(180deg,var(--bg-card),#101019);transition:border-color 240ms var(--out)}
+.qa:hover{border-color:var(--line-2)}
+.qa.open{border-color:rgba(255,122,41,.34)}
+.qbtn{width:100%;display:flex;justify-content:space-between;align-items:center;gap:16px;
+  padding:19px 22px;text-align:left}
+.qbtn span.t{font-family:'Sora',sans-serif;font-size:15.5px;font-weight:600;letter-spacing:-.02em;flex:1}
+.qico{width:26px;height:26px;border-radius:50%;border:1px solid var(--line-2);flex-shrink:0;position:relative;
+  transition:transform 300ms var(--drawer),border-color 240ms var(--out),background 240ms var(--out)}
+.qico::before,.qico::after{content:'';position:absolute;background:var(--or);border-radius:2px;
+  left:50%;top:50%;transition:opacity 240ms var(--out)}
+.qico::before{width:11px;height:1.6px;transform:translate(-50%,-50%)}
+.qico::after{width:1.6px;height:11px;transform:translate(-50%,-50%)}
+.qa.open .qico{transform:rotate(135deg);border-color:var(--or);background:rgba(255,122,41,.12)}
+.qa.open .qico::after{opacity:0}
+.ans{display:grid;grid-template-rows:0fr;transition:grid-template-rows 380ms var(--drawer)}
+.qa.open .ans{grid-template-rows:1fr}
+.ans > div{overflow:hidden}
+.ansin{padding:2px 22px 22px;font-size:15px;color:var(--mute);line-height:1.76;border-top:1px solid transparent}
+.qa.open .ansin{border-top-color:var(--line);padding-top:18px}
+.ansin ul{margin:12px 0 0 2px}
+.ansin li{font-size:14.5px}
+.ansin a{color:var(--or);border-bottom:1px solid rgba(255,122,41,.32)}
+.hint{border:1px solid rgba(255,122,41,.22);background:rgba(255,122,41,.06);border-radius:var(--r-sm);
+  padding:14px 17px;margin-top:14px;font-size:14px;color:var(--or-soft);line-height:1.65}
+.noresult{display:none;text-align:center;padding:52px 0;color:var(--mute);font-size:15px}
+.noresult.show{display:block}
+
+/* contact card */
+.ccard{border:1px solid var(--line);border-radius:var(--r-lg);padding:38px;text-align:center;margin-top:52px;
+  background:linear-gradient(180deg,var(--bg-card),#101019);position:relative;overflow:hidden}
+.ccard::after{content:'';position:absolute;top:-140px;left:50%;transform:translateX(-50%);width:420px;height:300px;
+  background:radial-gradient(ellipse,rgba(255,122,41,.16),transparent 68%);pointer-events:none}
+.ccard h3{font-family:'Sora',sans-serif;font-size:22px;font-weight:700;letter-spacing:-.03em;position:relative}
+.ccard p{color:var(--mute);font-size:15px;margin:10px 0 24px;position:relative}
+.ccard .btn{position:relative}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(18px);filter:blur(5px);
+  transition:opacity .7s var(--out),transform .7s var(--out),filter .7s var(--out)}
+.rv.in{opacity:1;transform:none;filter:none}
+
+/* footer */
+footer{border-top:1px solid var(--line);padding:64px 0 30px}
+.fgrid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:52px;margin-bottom:48px}
+.fbrand p{font-size:13.5px;color:var(--mute);line-height:1.72;margin-top:16px;max-width:30ch}
+.fcol h4{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--label);margin-bottom:16px}
+.fcol ul{list-style:none;display:flex;flex-direction:column;gap:10px}
+.fcol a{font-size:13.5px;color:var(--mute);transition:color 200ms var(--out)}
+.fcol a:hover{color:var(--ink)}
+.fbot{border-top:1px solid var(--line);padding-top:26px;display:flex;justify-content:space-between;
+  align-items:center;gap:16px;flex-wrap:wrap}
+.fbot p{font-size:13px;color:var(--mute)}
+.fbot a{color:var(--mute)}
+.socs{display:flex;gap:9px}
+.soc-btn{width:36px;height:36px;border-radius:11px;border:1px solid var(--line);display:grid;place-items:center;
+  background:rgba(255,255,255,.02);
+  transition:transform 200ms var(--out),border-color 200ms var(--out),background 200ms var(--out)}
+.soc-btn:hover{transform:translateY(-2px);border-color:var(--or);background:rgba(255,122,41,.1)}
+.soc-btn svg{width:16px;height:16px;fill:var(--mute);transition:fill 200ms var(--out)}
+.soc-btn:hover svg{fill:var(--or)}
+
+@media(max-width:1000px){
+  .doc{grid-template-columns:1fr;gap:0}
+  .toc{display:none}
+  .fgrid{grid-template-columns:1fr 1fr;gap:36px}
+}
+@media(max-width:860px){
+  :root{--gut:20px}
+  .navlinks{display:none}
+  .burger{display:block}
+  .pill{gap:14px;padding:8px 8px 8px 18px}
+  .navbar .btn{display:none}
+  .phead{padding:118px 0 0}
+  .doc{padding:52px 0 88px}
+  .fgrid{grid-template-columns:1fr}
+  .fbot{justify-content:center;text-align:center}
+  .ccard{padding:28px 22px}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition-duration:.01ms!important}
+  .rv{opacity:1;transform:none;filter:none}
+}
+</style>
 </head>
 <body>
-<header>
-  <svg class="logo-mark" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M18 4C11 4 6 9 6 16c0 2.5 0.8 5 2.5 7C6 25.5 6 30 11 32c2 1.5 4.5 3 7 3s5-1.5 7-3c5-2 5-6.5 2.5-9C29.2 21 30 18.5 30 16c0-7-5-12-12-12z" stroke="url(#lg2)" stroke-width="2.5" fill="none"/>
-    <path d="M18 10l-4 9h4l-2 8 6-11h-4l2-6z" fill="url(#lg2)"/>
-    <defs><linearGradient id="lg2" x1="6" y1="4" x2="30" y2="35" gradientUnits="userSpaceOnUse"><stop stop-color="#FF7A29"/><stop offset="1" stop-color="#FF5470"/></linearGradient></defs>
-  </svg>
-  <span class="brand">Mind<span>Battle</span></span>
+<a class="skip" href="#main">Skip to content</a>
+<div class="grain" aria-hidden="true"></div>
+<div class="prog" id="prog" aria-hidden="true"></div>
+<div class="navbar" id="navbar">
+  <nav class="pill" aria-label="Main">
+    <a class="brand" href="index.html"><svg viewBox="0 0 36 36" fill="none" aria-hidden="true">
+        <path d="M18 4C11 4 6 9 6 16c0 2.5.8 5 2.5 7C6 25.5 6 30 11 32c2 1.5 4.5 3 7 3s5-1.5 7-3c5-2 5-6.5 2.5-9C29.2 21 30 18.5 30 16c0-7-5-12-12-12z" stroke="url(#ln1)" stroke-width="2.5"/>
+        <path d="M18 10l-4 9h4l-2 8 6-11h-4l2-6z" fill="url(#ln1)"/>
+        <defs><linearGradient id="ln1" x1="6" y1="4" x2="30" y2="35" gradientUnits="userSpaceOnUse"><stop stop-color="#FF7A29"/><stop offset="1" stop-color="#FF5470"/></linearGradient></defs>
+      </svg>MindBattle</a>
+    <ul class="navlinks"><li><a href="index.html">Home</a></li><li><a href="faq.html">FAQ</a></li><li><a href="privacy.html" class="here">Privacy</a></li><li><a href="terms.html">Terms</a></li><li><a href="delete.html">Account Deletion</a></li></ul>
+    <a class="btn btn--fill btn--sm" href="https://play.google.com/store/apps/details?id=com.cognira.mindbattle" target="_blank" rel="noopener">Get the app<span class="ar" aria-hidden="true">&#8599;</span></a>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><i></i><i></i></button>
+  </nav>
+</div>
+<div class="sheet" id="sheet"><a href="index.html">Home</a><a href="faq.html">FAQ</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="delete.html">Account Deletion</a>
+  <a class="btn btn--fill" href="https://play.google.com/store/apps/details?id=com.cognira.mindbattle" target="_blank" rel="noopener">Get on Google Play<span class="ar" aria-hidden="true">&#8599;</span></a>
+</div>
+<main id="main">
+<header class="phead">
+  <div class="cone" aria-hidden="true"></div>
+  <div class="mesh" aria-hidden="true"></div>
+  <div class="wrap"><div class="in">
+    <span class="tagline priv">Privacy</span>
+    <h1>Privacy Policy</h1>
+    <p class="eff">Effective Date: June 20, 2026 &nbsp;&middot;&nbsp; Version 1.3</p>
+    <div class="notice priv">Your privacy matters to us. This Policy explains what data we collect, why we collect it, how we use it, and your rights.</div>
+  </div></div>
 </header>
+<div class="wrap"><div class="doc">
+<aside class="toc"><h4>On this page</h4><ul><li><a href="#s1">Who We Are</a></li><li><a href="#s2">Data We Collect</a></li><li><a href="#s3">How We Use Your Data</a></li><li><a href="#s4">Third-Party Services</a></li><li><a href="#s5">Data Security</a></li><li><a href="#s6">Data Retention</a></li><li><a href="#s7">Children's Privacy</a></li><li><a href="#s8">Your Rights</a></li><li><a href="#s9">International Transfers</a></li><li><a href="#s10">Changes to This Policy</a></li><li><a href="#s11">Contact</a></li></ul></aside>
+<article class="body rv">
 
-<div class="container">
-  <div class="badge">Privacy</div>
-  <h1 class="page-title">Privacy Policy</h1>
-  <p class="effective">Effective Date: June 20, 2026 &nbsp;·&nbsp; Version 1.3</p>
+<h2 id="s1"><span class="num">01</span>Who We Are</h2>
+<p>MindBattle is operated by <strong>Cognira LLC</strong>, a limited liability company registered in the State of Wyoming, United States. For privacy matters, contact us at <a href="mailto:support@mind-battle.com">support@mind-battle.com</a>.</p>
 
-  <div class="notice">Your privacy matters to us. This Policy explains what data we collect, why we collect it, how we use it, and your rights.</div>
+<h2 id="s2"><span class="num">02</span>Data We Collect</h2>
+<h3>2.1 Data You Provide</h3>
+<div class="tblwrap"><table>
+<thead><tr><th>Data</th><th>Purpose</th></tr></thead>
+<tbody>
+<tr><td>Email address</td><td>Account creation, login, communications</td></tr>
+<tr><td>Username</td><td>In-app identity and leaderboard display</td></tr>
+<tr><td>Password</td><td>Authentication &mdash; stored securely, never in plain text</td></tr>
+<tr><td>Google account (if Google Sign-in used)</td><td>Authentication via Google</td></tr>
+<tr><td>Payoneer email</td><td>Processing approved Payoneer withdrawal payouts</td></tr>
+<tr><td>USDT wallet address</td><td>Processing approved USDT (crypto) withdrawal payouts</td></tr>
+<tr><td>KYC documents (government ID)</td><td>Identity verification required before any cash withdrawal</td></tr>
+<tr><td>Referral code entered at registration</td><td>Referral programme tracking</td></tr>
+</tbody></table></div>
 
-  <h2>1. Who We Are</h2>
-  <p>MindBattle is operated by <strong>Cognira LLC</strong>, a limited liability company registered in the State of Wyoming, United States. For privacy matters, contact us at <a href="mailto:support@mind-battle.com">support@mind-battle.com</a>.</p>
+<h3>2.2 Data Generated by App Use</h3>
+<div class="tblwrap"><table>
+<thead><tr><th>Data</th><th>Purpose</th></tr></thead>
+<tbody>
+<tr><td>Battle results and XP earned</td><td>Game progression and leaderboard ranking</td></tr>
+<tr><td>Cash Coin balance and transactions</td><td>Offerwall earnings, withdrawal processing, fraud prevention</td></tr>
+<tr><td>Account activity and session data</td><td>Fraud prevention, security, and analytics</td></tr>
+<tr><td>Category selections per battle</td><td>Gameplay</td></tr>
+<tr><td>Referral usage and verified referral count</td><td>Referral programme tracking and reward crediting</td></tr>
+<tr><td>Account status flags</td><td>Platform integrity and abuse prevention</td></tr>
+<tr><td>Withdrawal requests and KYC status</td><td>Payout processing and compliance</td></tr>
+</tbody></table></div>
 
-  <h2>2. Data We Collect</h2>
-  <h3>2.1 Data You Provide</h3>
-  <table>
-    <tr><th>Data</th><th>Purpose</th></tr>
-    <tr><td>Email address</td><td>Account creation, login, communications</td></tr>
-    <tr><td>Username</td><td>In-app identity and leaderboard display</td></tr>
-    <tr><td>Password</td><td>Authentication — stored securely, never in plain text</td></tr>
-    <tr><td>Google account (if Google Sign-in used)</td><td>Authentication via Google</td></tr>
-    <tr><td>Payoneer email</td><td>Processing approved Payoneer withdrawal payouts</td></tr>
-    <tr><td>USDT wallet address</td><td>Processing approved USDT (crypto) withdrawal payouts</td></tr>
-    <tr><td>KYC documents (government ID)</td><td>Identity verification required before any cash withdrawal</td></tr>
-    <tr><td>Referral code entered at registration</td><td>Referral programme tracking</td></tr>
-  </table>
+<h3>2.3 Data Collected Automatically</h3>
+<ul>
+<li><strong>Device identifiers</strong> &mdash; used for analytics and ad serving</li>
+<li><strong>IP address</strong> &mdash; used for fraud detection, security, and VPN/proxy detection</li>
+<li><strong>App usage data</strong> &mdash; crash reports and performance monitoring</li>
+<li><strong>Advertising ID</strong> &mdash; used for rewarded ad serving</li>
+</ul>
 
-  <h3>2.2 Data Generated by App Use</h3>
-  <table>
-    <tr><th>Data</th><th>Purpose</th></tr>
-    <tr><td>Battle results and XP earned</td><td>Game progression and leaderboard ranking</td></tr>
-    <tr><td>Cash Coin balance and transactions</td><td>Offerwall earnings, withdrawal processing, fraud prevention</td></tr>
-    <tr><td>Account activity and session data</td><td>Fraud prevention, security, and analytics</td></tr>
-    <tr><td>Category selections per battle</td><td>Gameplay</td></tr>
-    <tr><td>Referral usage and verified referral count</td><td>Referral programme tracking and reward crediting</td></tr>
-    <tr><td>Account status flags</td><td>Platform integrity and abuse prevention</td></tr>
-    <tr><td>Withdrawal requests and KYC status</td><td>Payout processing and compliance</td></tr>
-  </table>
+<h2 id="s3"><span class="num">03</span>How We Use Your Data</h2>
+<ul>
+<li>To create and manage your account</li>
+<li>To operate the quiz battle gameplay and XP system</li>
+<li>To credit and process Cash Coin earnings and withdrawals</li>
+<li>To verify your identity before payouts</li>
+<li>To detect and prevent fraud, cheating, and abuse</li>
+<li>To serve rewarded video advertisements</li>
+<li>To operate the referral programme</li>
+<li>To send transactional emails (account verification, password reset, withdrawal status)</li>
+<li>To comply with legal obligations</li>
+</ul>
 
-  <h3>2.3 Data Collected Automatically</h3>
-  <ul>
-    <li><strong>Device identifiers</strong> — used for analytics and ad serving</li>
-    <li><strong>IP address</strong> — used for fraud detection, security, and VPN/proxy detection</li>
-    <li><strong>App usage data</strong> — crash reports and performance monitoring</li>
-    <li><strong>Advertising ID</strong> — used for rewarded ad serving</li>
-  </ul>
+<h2 id="s4"><span class="num">04</span>Third-Party Services</h2>
+<h3>4.1 Advertising</h3>
+<p>MindBattle uses Google AdMob to serve rewarded video advertisements. AdMob operates through a network of third-party advertising partners and authorised buyers who may collect and process your Advertising ID, device information, and other technical data to serve and measure ads on our behalf.</p>
+<p>If you are located in the European Economic Area, United Kingdom, or Switzerland, MindBattle displays a consent message before requesting personalised ads, in line with GDPR requirements. This message lets you consent to, decline, or manage your choices for each data-use purpose. Declining consent does not limit your ability to use MindBattle &mdash; you will be shown non-personalised ads instead.</p>
+<p>You can opt out of personalised advertising generally at any time via your device's ad settings. See <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>.</p>
 
-  <h2>3. How We Use Your Data</h2>
-  <ul>
-    <li>To create and manage your account</li>
-    <li>To operate the quiz battle gameplay and XP system</li>
-    <li>To credit and process Cash Coin earnings and withdrawals</li>
-    <li>To verify your identity before payouts</li>
-    <li>To detect and prevent fraud, cheating, and abuse</li>
-    <li>To serve rewarded video advertisements</li>
-    <li>To operate the referral programme</li>
-    <li>To send transactional emails (account verification, password reset, withdrawal status)</li>
-    <li>To comply with legal obligations</li>
-  </ul>
+<h3>4.2 Offerwall</h3>
+<p>When you engage with offerwall offers, you interact with a third-party offerwall network and their offer providers. MindBattle shares your user ID and offer completion status with the offerwall network to credit your earnings. We do not share your name, email, or KYC documents with offerwall providers.</p>
 
-  <h2>4. Third-Party Services</h2>
-  <h3>4.1 Advertising</h3>
-  <p>MindBattle uses Google AdMob to serve rewarded video advertisements. AdMob operates through a network of third-party advertising partners and authorised buyers who may collect and process your Advertising ID, device information, and other technical data to serve and measure ads on our behalf.</p>
-  <p>If you are located in the European Economic Area, United Kingdom, or Switzerland, MindBattle displays a consent message before requesting personalised ads, in line with GDPR requirements. This message lets you consent to, decline, or manage your choices for each data-use purpose. Declining consent does not limit your ability to use MindBattle — you will be shown non-personalised ads instead.</p>
-  <p>You can opt out of personalised advertising generally at any time via your device's ad settings. See <a href="https://policies.google.com/privacy" target="_blank">Google's Privacy Policy</a>.</p>
+<h3>4.3 Cloud Services</h3>
+<p>We use industry-standard cloud infrastructure (including Google Firebase) to store and process your data securely. Data is stored on servers with appropriate security standards.</p>
 
-  <h3>4.2 Offerwall</h3>
-  <p>When you engage with offerwall offers, you interact with a third-party offerwall network and their offer providers. MindBattle shares your user ID and offer completion status with the offerwall network to credit your earnings. We do not share your name, email, or KYC documents with offerwall providers.</p>
+<h3>4.4 Payment Processors (Payoneer &amp; USDT)</h3>
+<p>When you request a withdrawal, we share the information required to process your payout with the relevant payment provider. For Payoneer withdrawals, we share your Payoneer email and withdrawal amount with Payoneer (see <a href="https://www.payoneer.com/legal/privacy-policy/" target="_blank" rel="noopener">Payoneer's Privacy Policy</a>). For USDT withdrawals, your payout is sent to the crypto wallet address you provide on the blockchain network you select; blockchain transactions are public and irreversible by nature.</p>
 
-  <h3>4.3 Cloud Services</h3>
-  <p>We use industry-standard cloud infrastructure (including Google Firebase) to store and process your data securely. Data is stored on servers with appropriate security standards.</p>
+<h2 id="s5"><span class="num">05</span>Data Security</h2>
+<ul>
+<li>Passwords are never stored in plain text</li>
+<li>Access controls ensure users can only read and write their own data</li>
+<li>Sensitive account fields are protected server-side and cannot be modified directly by users</li>
+<li>All data is transmitted over encrypted connections</li>
+<li>KYC documents are reviewed securely and not shared with unauthorised parties</li>
+</ul>
+<p>In the event of a data breach affecting your personal data, we will notify affected users within 72 hours of becoming aware.</p>
 
-  <h3>4.4 Payment Processors (Payoneer &amp; USDT)</h3>
-  <p>When you request a withdrawal, we share the information required to process your payout with the relevant payment provider. For Payoneer withdrawals, we share your Payoneer email and withdrawal amount with Payoneer (see <a href="https://www.payoneer.com/legal/privacy-policy/" target="_blank">Payoneer's Privacy Policy</a>). For USDT withdrawals, your payout is sent to the crypto wallet address you provide on the blockchain network you select; blockchain transactions are public and irreversible by nature.</p>
+<h2 id="s6"><span class="num">06</span>Data Retention</h2>
+<div class="tblwrap"><table>
+<thead><tr><th>Data Type</th><th>Retention Period</th></tr></thead>
+<tbody>
+<tr><td>Account data (profile, XP, Coins, battle history)</td><td>Until account deletion + 30-day grace period</td></tr>
+<tr><td>Transaction and withdrawal records</td><td>5 years (legal/financial compliance)</td></tr>
+<tr><td>KYC documents</td><td>5 years after last withdrawal (compliance)</td></tr>
+<tr><td>Fraud and penalty records</td><td>Permanently (to prevent re-registration by bad actors)</td></tr>
+</tbody></table></div>
 
-  <h2>5. Data Security</h2>
-  <ul>
-    <li>Passwords are never stored in plain text</li>
-    <li>Access controls ensure users can only read and write their own data</li>
-    <li>Sensitive account fields are protected server-side and cannot be modified directly by users</li>
-    <li>All data is transmitted over encrypted connections</li>
-    <li>KYC documents are reviewed securely and not shared with unauthorised parties</li>
-  </ul>
-  <p>In the event of a data breach affecting your personal data, we will notify affected users within 72 hours of becoming aware.</p>
+<h2 id="s7"><span class="num">07</span>Children's Privacy</h2>
+<p>MindBattle is intended for users aged 18 and above. We do not knowingly collect personal data from anyone under 18. If you believe a minor has registered, contact us at <a href="mailto:support@mind-battle.com">support@mind-battle.com</a>.</p>
 
-  <h2>6. Data Retention</h2>
-  <table>
-    <tr><th>Data Type</th><th>Retention Period</th></tr>
-    <tr><td>Account data (profile, XP, Coins, battle history)</td><td>Until account deletion + 30-day grace period</td></tr>
-    <tr><td>Transaction and withdrawal records</td><td>5 years (legal/financial compliance)</td></tr>
-    <tr><td>KYC documents</td><td>5 years after last withdrawal (compliance)</td></tr>
-    <tr><td>Fraud and penalty records</td><td>Permanently (to prevent re-registration by bad actors)</td></tr>
-  </table>
+<h2 id="s8"><span class="num">08</span>Your Rights</h2>
+<ul>
+<li><strong>Access</strong> &mdash; request a copy of the data we hold about you</li>
+<li><strong>Correction</strong> &mdash; request correction of inaccurate data</li>
+<li><strong>Deletion</strong> &mdash; request deletion of your account and personal data (see <a href="delete.html">Account Deletion Policy</a>)</li>
+<li><strong>Objection</strong> &mdash; object to processing of your data for direct marketing</li>
+<li><strong>Portability</strong> &mdash; request your data in a portable format</li>
+</ul>
+<p>If you are located in the EEA, UK, or Switzerland, you may withdraw or update your advertising consent at any time via the consent message shown in the app.</p>
+<p>Contact us at <a href="mailto:support@mind-battle.com">support@mind-battle.com</a>. We will respond within 30 days.</p>
 
-  <h2>7. Children's Privacy</h2>
-  <p>MindBattle is intended for users aged 18 and above. We do not knowingly collect personal data from anyone under 18. If you believe a minor has registered, contact us at <a href="mailto:support@mind-battle.com">support@mind-battle.com</a>.</p>
+<h2 id="s9"><span class="num">09</span>International Data Transfers</h2>
+<p>MindBattle is operated from the United States, and your data may be processed on servers located outside your country of residence. By using MindBattle, you consent to such transfers, which are protected by industry-standard security measures.</p>
 
-  <h2>8. Your Rights</h2>
-  <ul>
-    <li><strong>Access</strong> — request a copy of the data we hold about you</li>
-    <li><strong>Correction</strong> — request correction of inaccurate data</li>
-    <li><strong>Deletion</strong> — request deletion of your account and personal data (see <a href="delete.html">Account Deletion Policy</a>)</li>
-    <li><strong>Objection</strong> — object to processing of your data for direct marketing</li>
-    <li><strong>Portability</strong> — request your data in a portable format</li>
-  </ul>
-  <p>If you are located in the EEA, UK, or Switzerland, you may withdraw or update your advertising consent at any time via the consent message shown in the app.</p>
-  <p>Contact us at <a href="mailto:support@mind-battle.com">support@mind-battle.com</a>. We will respond within 30 days.</p>
+<h2 id="s10"><span class="num">10</span>Changes to This Policy</h2>
+<p>We may update this Privacy Policy from time to time. Material changes will be notified via in-app notice at least 14 days before taking effect.</p>
 
-  <h2>9. International Data Transfers</h2>
-  <p>MindBattle is operated from the United States, and your data may be processed on servers located outside your country of residence. By using MindBattle, you consent to such transfers, which are protected by industry-standard security measures.</p>
+<h2 id="s11"><span class="num">11</span>Contact</h2>
+<p>Cognira LLC &middot; Wyoming, USA<br/><a href="mailto:support@mind-battle.com">support@mind-battle.com</a></p>
 
-  <h2>10. Changes to This Policy</h2>
-  <p>We may update this Privacy Policy from time to time. Material changes will be notified via in-app notice at least 14 days before taking effect.</p>
-
-  <h2>11. Contact</h2>
-  <p>Cognira LLC · Wyoming, USA<br><a href="mailto:support@mind-battle.com">support@mind-battle.com</a></p>
+<div class="ccard">
+  <h3>Questions about your data?</h3>
+  <p>We respond to privacy requests within 30 days.</p>
+  <a class="btn btn--fill" href="mailto:support@mind-battle.com">Contact us<span class="ar" aria-hidden="true">&rarr;</span></a>
 </div>
 
+</article>
+</div></div>
+</main>
 <footer>
-  &copy; 2026 MindBattle · Cognira LLC &nbsp;·&nbsp;
-  <a href="terms.html">Terms of Service</a> &nbsp;·&nbsp;
-  <a href="privacy.html">Privacy Policy</a> &nbsp;·&nbsp;
-  <a href="faq.html">FAQ</a> &nbsp;·&nbsp;
-  <a href="delete.html">Account Deletion</a>
+  <div class="wrap">
+    <div class="fgrid">
+      <div class="fbrand">
+        <a class="brand" href="index.html"><svg viewBox="0 0 36 36" fill="none" aria-hidden="true">
+        <path d="M18 4C11 4 6 9 6 16c0 2.5.8 5 2.5 7C6 25.5 6 30 11 32c2 1.5 4.5 3 7 3s5-1.5 7-3c5-2 5-6.5 2.5-9C29.2 21 30 18.5 30 16c0-7-5-12-12-12z" stroke="url(#lf1)" stroke-width="2.5"/>
+        <path d="M18 10l-4 9h4l-2 8 6-11h-4l2-6z" fill="url(#lf1)"/>
+        <defs><linearGradient id="lf1" x1="6" y1="4" x2="30" y2="35" gradientUnits="userSpaceOnUse"><stop stop-color="#FF7A29"/><stop offset="1" stop-color="#FF5470"/></linearGradient></defs>
+      </svg>MindBattle</a>
+        <p>Live trivia battles against a hundred players at once. Built and operated by Cognira LLC.</p>
+      </div>
+      <div class="fcol"><h4>Game</h4><ul>
+        <li><a href="index.html#try">Try a question</a></li>
+        <li><a href="index.html#format">Battle format</a></li>
+        <li><a href="index.html#cats">Categories</a></li>
+        <li><a href="index.html#ranks">Ranks &amp; XP</a></li>
+      </ul></div>
+      <div class="fcol"><h4>Company</h4><ul>
+        <li><a href="index.html#rewards">Rewards</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="terms.html">Terms of Service</a></li>
+      </ul></div>
+      <div class="fcol"><h4>Support</h4><ul>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="mailto:support@mind-battle.com">Email support</a></li>
+        <li><a href="delete.html">Delete account</a></li>
+        <li><a href="https://play.google.com/store/apps/details?id=com.cognira.mindbattle" target="_blank" rel="noopener">Google Play</a></li>
+      </ul></div>
+    </div>
+    <div class="fbot">
+      <p>&copy; 2026 Cognira LLC. All rights reserved. &middot; <a href="privacy.html">Privacy</a> &middot; <a href="terms.html">Terms</a></p>
+      <div class="socs">
+        <a class="soc-btn" href="https://www.instagram.com/min_dbattle" target="_blank" rel="noopener" title="Instagram" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41-.56-.22-.96-.48-1.38-.9-.42-.42-.68-.82-.9-1.38-.16-.42-.36-1.06-.41-2.23-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41 1.27-.06 1.65-.07 4.85-.07zM12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63c-.79.31-1.46.72-2.12 1.38C1.35 2.68.94 3.35.63 4.14.33 4.9.13 5.78.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.31.79.72 1.46 1.38 2.12.66.66 1.33 1.07 2.12 1.38.76.3 1.64.5 2.91.56 1.28.06 1.69.07 4.95.07s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56.79-.31 1.46-.72 2.12-1.38.66-.66 1.07-1.33 1.38-2.12.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91-.31-.79-.72-1.46-1.38-2.12C21.32 1.35 20.65.94 19.86.63 19.1.33 18.22.13 16.95.07 15.67.01 15.26 0 12 0zm0 5.84a6.16 6.16 0 100 12.32 6.16 6.16 0 000-12.32zM12 16a4 4 0 110-8 4 4 0 010 8zm6.41-10.85a1.44 1.44 0 100 2.88 1.44 1.44 0 000-2.88z"/></svg>
+        </a>
+        <a class="soc-btn" href="https://www.facebook.com/share/14hEa4qAHVH/" target="_blank" rel="noopener" title="Facebook" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.68.24 2.68.24v2.97h-1.51c-1.49 0-1.96.93-1.96 1.89v2.25h3.33l-.53 3.49h-2.8V24C19.61 23.1 24 18.1 24 12.07z"/></svg>
+        </a>
+        <a class="soc-btn" href="https://www.tiktok.com/@min_dbattle" target="_blank" rel="noopener" title="TikTok" aria-label="TikTok">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64c.3 0 .59.05.87.13V9.4a6.33 6.33 0 00-.87-.06 6.34 6.34 0 105.44 9.6 6.31 6.31 0 001.03-3.46V8.4a8.28 8.28 0 004.82 1.53V6.49a4.85 4.85 0 01-1.51.2z"/></svg>
+        </a>
+        <a class="soc-btn" href="https://www.linkedin.com/company/mindbattle/" target="_blank" rel="noopener" title="LinkedIn" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 110-4.13 2.06 2.06 0 010 4.13zm1.78 13.02H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg>
+        </a>
+        <a class="soc-btn" href="https://whatsapp.com/channel/0029VbDPOTe8PgsDz3PQ2G32" target="_blank" rel="noopener" title="WhatsApp Channel" aria-label="WhatsApp Channel">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.76-1.66-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.06 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.42-.07-.13-.27-.2-.57-.35zM12.04 21.5h-.01a9.44 9.44 0 01-4.81-1.32l-.35-.2-3.58.94.96-3.49-.23-.36a9.4 9.4 0 01-1.44-5.03c0-5.2 4.24-9.43 9.46-9.43a9.4 9.4 0 016.68 2.77 9.34 9.34 0 012.76 6.66c0 5.2-4.24 9.43-9.44 9.43zM20.5 3.49A11.34 11.34 0 0012.04.02C5.76.02.66 5.11.66 11.37c0 2 .52 3.95 1.52 5.67L.56 24l7.1-1.86a11.4 11.4 0 004.38.87h.01c6.27 0 11.37-5.09 11.37-11.35a11.28 11.28 0 00-3.32-8.03z"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
 </footer>
+<script>
+
+(function(){
+  'use strict';
+  var prog=document.getElementById('prog'),navbar=document.getElementById('navbar'),t=false;
+  function s(){var m=document.documentElement.scrollHeight-window.innerHeight;
+    prog.style.transform='scaleX('+(m>0?window.scrollY/m:0)+')';
+    navbar.classList.toggle('tight',window.scrollY>40);t=false;}
+  window.addEventListener('scroll',function(){if(!t){t=true;requestAnimationFrame(s);}},{passive:true});s();
+
+  var b=document.getElementById('burger'),sh=document.getElementById('sheet');
+  function tog(f){var o=f!==undefined?f:!sh.classList.contains('open');
+    sh.classList.toggle('open',o);b.classList.toggle('x',o);
+    b.setAttribute('aria-expanded',o);b.setAttribute('aria-label',o?'Close menu':'Open menu');
+    document.body.style.overflow=o?'hidden':'';}
+  b.addEventListener('click',function(){tog();});
+  sh.addEventListener('click',function(e){if(e.target.tagName==='A')tog(false);});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')tog(false);});
+
+  var io=new IntersectionObserver(function(en){en.forEach(function(e,i){if(!e.isIntersecting)return;
+    var el=e.target;setTimeout(function(){el.classList.add('in');},i*60);io.unobserve(el);});},
+    {threshold:.12,rootMargin:'0px 0px -30px 0px'});
+  document.querySelectorAll('.rv').forEach(function(el){io.observe(el);});
+
+  var heads=[].slice.call(document.querySelectorAll('.body h2, .fgroup > h3'));
+  var tocLinks=[].slice.call(document.querySelectorAll('.toc a'));
+  if(heads.length && tocLinks.length){
+    var sio=new IntersectionObserver(function(en){
+      en.forEach(function(e){
+        if(!e.isIntersecting)return;
+        tocLinks.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+e.target.id);});
+      });
+    },{rootMargin:'-110px 0px -70% 0px',threshold:0});
+    heads.forEach(function(h){sio.observe(h);});
+  }
+
+})();
+</script>
 </body>
 </html>
